@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+		<title>Project TSCT</title>
+	</head>
+	<body>
+		<h1>Projectinformation</h1>
+		<hr>
+		<table border="0">
+			<tr>
+				<th align="left" valign="top">Title:</th>
+				<td align="left" valign="top">
+					Traffic Simulator Configuration Tool
+				</td>
+			</tr>
+			<tr>
+				<th align="left" valign="top">Author:</th>
+				<td align="left" valign="top">
+					Stefan Wertich
+				</td>
+			</tr>
+			<tr>
+				<th align="left" valign="top">Organization:</th>
+				<td align="left" valign="top">
+					SSP
+				</td>
+			</tr>
+				<tr><th align="left" valign="top">Description:</th>
+				<td align="left" valign="top">
+					Configuration of Traffic Simulator of NAM.
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<h2>Necessary Packages</h2>
+		<ol>
+			<li>JAVA 6</li>
+			<li>FormLayout</li>
+			<li>XGUI</li>
+			<li>XTools</li>
+			<li>DBPF4J</li>
+			<li>DBPF4J-Ext</li>
+		</ol>
+		<h2>Version 1.2.6, 05.06.2011</h2>
+		<ol>
+			<li>UPDATE Libs: XTools-1.2.1, XGUI-1.1.1, DBPF-Ext-2.0.1</li>
+			<li>FIX Selecting new base network the OWR network is 50% greater than road</li>
+		</ol>
+		<h2>Version 1.2.5, 09.05.2011</h2>
+		<ol>
+			<li>UPDATE PreferenceDialog slightly changed layout</li>
+			<li>ADD Bus Contribute Traffic, slightly changed GUI</li>
+			<li>FIX Loading Simulator shows message with false param</li>
+			<li>FIX Reset doesn't uncheck and disable CommuteTripMaxTime</li> 
+			<li>UPDATE Libs: XTools-1.1.2, DBPF4J-1.6.0, DBPF4J-Ext-2.0.0</li>
+		</ol>
+		<h2>Version 1.2.4, 07.11.2010</h2>
+		<ol>
+			<li>UPDATE Disable possiblity to change RHW Monthly costs per network tile</li>
+			<li>UPDATE TrafficSimulator to 2.3.1</li>
+			<li>UPDATE UserGuide cause of RHW</li>
+			<li>UPDATE New libs: XTools-1.0.9</li>
+		</ol>
+		<h2>Version 1.2.3, 10.10.2010</h2>
+		<ol>
+			<li>UPDATE New libs: XTools-1.0.7, XGUI-1.0.5</li>
+		</ol>
+		<h2>Version 1.2.2, 18.09.2010</h2>
+		<ol>
+			<li>FIX Reset the Simulator reset the MonthlyFares and MonthlyCosts, too</li>
+			<li>UPDATE UserGuide (de/en)</li>
+			<li>UPDATE New libs: DBPF4J-1.5.1, DBPF4J-Ext-1.9.1</li>
+		</ol>
+		<h2>Version 1.2.1, 31.08.2010</h2>
+		<ol>
+			<li>CHANGE CommuteTripMaxTime to CheckBox</li>
+			<li>UPDATE New libs: DBPF4J-1.5.0, DBPF4J-Ext-1.9.0</li>
+		</ol>
+		<h2>Version 1.2.0, 18.08.2010</h2>
+		<ol>
+			<li>UPDATE New libs: DBPF4J-1.4.0, DBPF4J-Ext-1.8.0</li>
+			<li>CHANGE GUI slightly expanded for new option</li>
+			<li>ADD CommuteTripMaxTime</li>
+			<li>FIX Removed reset to loaded values when options viewed</li>
+		</ol>
+		<h2>Version 1.1.5, 07.08.2010</h2>
+		<ol>
+			<li>CHANGE AboutDialog with separate License view</li> 
+			<li>UPDATE New lib: FormLayout-1.3.0, DBPF4J-Ext-1.7.1</li>
+		</ol>
+		<h2>Version 1.1.4, 01.06.2010</h2>
+		<ol>
+			<li>FIX Exiting program with window closing now same as menu end</li>
+			<li>REMOVE TCUtil: not needed anymore</li>
+			<li>UPDATE New libs</li>
+			<li>ADD New resources/config.properties to TCConfig.fileConfig for easier updates</li>
+			<li>CHANGE TCConfig: fileConfig to fileUserConfig</li>
+			<li>FIX UserGuide, Screenshots</li>
+		</ol>
+		<h2>Version 1.1.3, 24.05.2010</h2>
+		<ol>
+			<li>UPDATE Change the maximum backups to 99</li>
+			<li>UPDATE Improve the Options dialog for language</li>
+			<li>ADD LangListRenderer, TCLanguage for better language handling</li>
+			<li>REMOVE LabelListRenderer</li>
+			<li>UPDATE UserGudie.html updated for new values of NoiseTrafficCoefficient</li>
+			<li>CHANGE NoiseTrafficCoefficient updated to 0.001-3.000</li>
+			<li>FIX About.html for german and english fixed</li>
+			<li>CHANGE TCMain: exit/end updated</li>
+		</ol>
+		<h2>Version 1.1.2, 15.05.2010</h2>
+		<ol>
+			<li>UPDATE Minor text updates (DE)</li>
+		</ol>
+		<h2>Version 1.1.1, 14.05.2010</h2>
+		<ol>
+			<li>UPDATE Minor text updates (EN)</li>
+			<li>UPDATE UserGuide updated</li>
+		</ol>
+		<h2>Version 1.1.0, 13.05.2010</h2>
+		<ol>
+			<li>ADD Extra-Preferences to configure program preferences</li>
+			<li>ADD Network: Traffic Noise Coefficient</li>
+			<li>ADD Exit button added to the GUI for faster exit</li>
+			<li>ADD SimulatorManager stores the backup under TSCT/backup</li>
+			<li>ADD PathBackup added for storing backup under TSCT</li>
+			<li>UPDATE New libs: XTools, XGUI</li>
+		</ol>		
+		<h2>Version 1.0.0, 01.05.2010</h2>
+		<ol>
+			<li>CHANGE TCUtil.getToken replaced with StringOp.getToken</li>
+			<li>ADD German UserGuide</li>
+			<li>CHANGE Log file will written to temp folder</li>
+			<li>ADD Loaded simulator file will be displayed</li>
+			<li>UPDATE Some text with NAM folder to Traffic Simulator folder</li>
+			<li>ADD Version,Build,SimulatorVersion to log file</li>
+			<li>FIX/REMOVE PathNAM completly replaced with pathTS</li>
+			<li>CHANGE Some improvement and changes for resources, language, GUI</li>
+			<li>ADD/CHANGE Traffic Template with LText entry for versioning</li>
+			<li>CHANGE Disabled french language because translation is incomplete</li>
+		</ol>
+		<h2>Version 0.9.9-rc3, 10.04.2010</h2>
+		<ol>
+			<li>FIX When files cannot be saved, the program will now not end, so the user
+			can probably end SimCity 4 or do any other things that prevent saving</li>
+		</ol>
+		<h2>Version 0.9.9-rc2, 08.04.2010</h2>
+		<ol>
+			<li>ADD/CHANGE Extract the about panel to own class AboutDialog</li>
+			<li>FIX Select the ZoneView, if file is present (previous change of default value)</li>
+			<li>FIX Update the welcome and userguide file, with choosen language</li>
+			<li>ADD The NAM logo to the About dialog</li>
+		</ol>
+		<h2>Version 0.9.9-rc1, 08.04.2010</h2>
+		<ol>
+			<li>CHANGE/FIX Separate the checkbox from label, so free space is free to click</li>
+			<li>ADD/CHANGE/FIX Backup of files in last save order (sav, sav1,...) with
+			maximum number of backupFiles</li>
+			<li>CHANGE Backup(boolean) to BackupFiles(int) for flexibel size</li>
+			<li>CHANGE Subway (Building) View set NAM or Maxix view into file</li>
+			<li>ADD resources/skins.conf with some defined skins</li>
+			<li>ADD SkinManager to configure the skin for the LookAndFeel</li>
+			<li>CHNAGE TCConfig to gui.TCConfig</li>
+			<li>CHANGE TCConfigurator Autodetect the default language for chooser</li>
+			<li>CHANGE SimulatorManager saves only files which are changed</li>
+			<li>ADD SimulatorConfig.equalsTraffic,equalsVolume,equalsZone</li>
+			<li>CHANGE DataViewPanel separate Volume and Zone changes</li>
+			<li>CHANGE TCPanel changed from extends JPanel to own PanelBuilder</li>
+			<li>UPDATE New libs: XGUI, XTool with no further dependencies</li>
+		</ol>
+		<h2>Version 0.9.8, 31.03.2010</h2>
+		<ol>
+			<li>ADD TCConfigurator to manage TCConfig: Images, Language, LookAndFeel</li>
+			<li>ADD Language chooser for english, german, french</li>
+			<li>CHANGE Some logging levels changed</li>
+			<li>UPDATE New libs XTools,XGUI</li>
+		</ol>
+		<h2>Version 0.9.7, 30.03.2010</h2>
+		<ol>
+			<li>FIX TCMain: Double save, if no TS folder exists</li>
+			<li>FIX/CHANGE Search for NAM folder and simulator folder redesigned</li>
+			<li>ADD TSConfig: pathTS the path to traffic simulator (not to NAM)</li>
+			<li>FIX DataViewPanel: Remember the selected options after de-/selected</li>
+			<li>FIX SimulatorManager: VolumeDataView name scheme changed,
+				add Custom, too, if only Traffic Simulator changed</li>
+			<li>CHANGE Icon: Leaving only TSCT.ico for program</li>
+			<li>CHANGE CVS: dist,ClickTeamInstaller removed from CVS</li>
+			<li>FIX TSCT_Icon.png fixed with letters</li>
+			<li>ADD VolumeViewUtil: Support for language</li>
+			<li>CHANGE TCMain: Changed a little the about dialog</li>
+			<li>CHANGE MassTransitPanel and TCMain: Icon,Logo,SSPLogo moved to 
+				TCConfig fileIcon,fileLogo,fileSSPLogo</li>
+			<li>CHANGE TCMain: Version and Build moved to TCConfig</li> 
+			<li>CHANGE Projectname, Packagename and some other names renamed to TSCT (SC4TSCT)</li>
+		</ol>
+		<h2>Version 0.9.6, 23.03.2010</h2>
+		<ol>
+			<li>CHANGE VolumeDataView File with new name sheme for creating</li> 
+			<li>FIX SimulatorManager.loadZoneViewFile do not disable DataView if not 
+			file found</li>
+			<li>FIX DataViewPanel wrong selected fixed</li>
+			<li>ADD Search also in: %Programs%/Maxis/SimCity 4/Plugins/NAM</li>
+		</ol>
+		<h2>Version 0.9.5, 21.03.2010</h2>
+		<ol>
+			<li>ADD TCConfig option: backupFile to enable/disable backup of files</li>
+			<li>ADD Backup/Delete of DataView file, if another ZoneDataView</li>
+			<li>CHANGE Redesign of TCMain and SimulatorManager</li>
+			<li>ADD SimulatorManager to handle the simulator</li>
+			<li>FIX TCMain.searchOtherSimulator doesn't recognize ParkAndRide of SimZ</li>
+			<li>FIX TrafficUtil: Read of Intersection Effect Multiplier</li>
+			<li>CHANGE Classic Street Capacity=100, but Freight Truck and Ped use Road</li>
+			<li>ADD Reset can load the previous settings or set default</li>
+			<li>FIX Reset now restores the last configuration (may be the default)</li>
+			<li>ADD SimulatorConfig: add clone, equals to find user changes when compare</li>
+			<li>UPDATE DataViewUtils: Loads the dataView options, if exists</li>
+			<li>UPDATE Libs</li>
+		</ol>
+		<h2>Version 0.9.0, 21.02.2010</h2>
+		<ol>
+			<li>ADD Config improved, Debug option create Debug file</li>
+			<li>CHANGE TrafficConfig to SimulatorConfig</li>
+			<li>ADD ZonesView: SubwayLines,Props update ZoneDataView file</li>
+			<li>ADD ZoneViewUtil</li>
+			<li>CHANGE TrafficIO to DBPFFileIO2</li>
+			<li>CHANGE Get Network Capacity from Traffic filename</li>
+			<li>CHANGE Traffic name creation procedure changed</li>
+			<li>FIX Window Exit ask same as Menu Exit</li>
+			<li>FIX Minor language errors</li>
+			<li>ADD Check NAM folder for other Simulator and delete them optional</li>
+			<li>CHANGE Changed About dialog a little bit</li>
+		</ol>
+		<h2>Version 0.8.0, 10.02.2010</h2>
+		<ol>
+			<li>CHANGE UserGuide file Configurator.html changed to UserGuide.html</li>
+			<li>CHANGE Open only files with ending dat</li>
+			<li>CHANGE Redesign of search, open and save of files</li>						
+			<li>ADD Ask user to save before exit except WindowExit</li>
+			<li>ADD Introduction dialog for new users</li>
+			<li>DISCARD Loading TCValues from XML file</li>
+			<li>ADD DataView with backup and delete option</li>
+			<li>ADD DataView support with default values and create from Template</li>
+			<li>ADD Loading templates for Traffic and DataView</li>
+			<li>ADD NetworkCapacity for Ferry</li>
+			<li>ADD DataViewUtil for handling DataViewFile</li>
+			<li>ADD SimulatorUtil for handling SimulatorFile</li>
+			<li>FIX Minor translation to German language</li>
+			<li>CHANGE Algorithm for creating new filename</li>
+			<li>CHANGE Bigger Log dialog</li>
+			<li>FIX IntersectionEffectMultiplier calculation</li> 
+			<li>FIX Finding NAM in plugins, if program is installed to .../SC4/Apps/TSCT/</li>
+		</ol>		
+		<h2>Version 0.7.0, 03.02.2010</h2>
+		<ol>
+			<li>ADD DataView options, not full functional yet</li>
+			<li>CHANGE SimulatorConfig renamed to TrafficConfig</li>
+			<li>FIX Minor language errors</li>
+			<li>ADD Configuration will be stored in data/NAMTC.conf</li>
+			<li>CHANGE Renamed Configurator to TCMain</li>
+			<li>ADD TCConfig added with lastPath, etc.</li>
+			<li>CHANGE/FIX Search for NAM folder/file improved</li>
+		</ol>
+		<h2>Version 0.6.0, 01.02.2010</h2>
+		<ol>
+			<li>ADD Localization for English and German</li>
+			<li>FIX Saved custom name was wrong</li>
+			<li>CHANGE Minor changes in label placements</li>
+			<li>REMOVE For ULTRA capacity don't check the maximum of 1</li>
+			<li>CHANGE When choosing a new Base Capacity, automatically set the Multiplier to 1</li>
+			<li>CHANGE Changed name to Traffic Simulator Configuration Tool</li>
+			<li>CHANGE Package namtool to nam</li>
+			<li>CHANGE Size of window and panels</li>
+			<li>ADD DataViewPanel</li>
+			<li>FIX Wrong build with resources folder, so no resources were found</li>
+		</ol>
+		<h2>Version 0.5.0, 29.01.2010</h2>
+		<ol>
+			<li>CHANGE Extracted from SSPTool-Plugin to standalone app</li>
+		</ol>
+		<h2>Version 0.0.1, 20.01.2010</h2>
+		<ol>
+			<li>Initial release</li>
+		</ol>
+	</body>
+</html>

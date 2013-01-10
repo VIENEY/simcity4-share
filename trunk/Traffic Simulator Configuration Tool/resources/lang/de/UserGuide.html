@@ -1,0 +1,415 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Traffic Simulator Configuration Tool - Benutzerhandbuch</title>
+<style type="text/css">
+<!--
+.text_titel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.text_zwischentitel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.text_normal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-align: justify;
+}
+body {
+	background-image: url();
+	background-color: #B2BAD9;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:visited {
+	color: #000000;
+	text-decoration: underline
+}
+a:hover {
+	color: #CC0000;
+	text-decoration: underline
+}
+a:link {
+	color: #000000;
+	text-decoration: underline
+}
+.rot {
+	color: #FF0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.blau {
+	color: #0000FF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;	
+}
+.gruen {	color: #00FF00;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="750" border="0" align="center" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;Traffic Simulator Configuration Tool - Benutzerhandbuch </span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal">Das Traffic Simulator Configuration Tool (TSCT) ist ein hilfreiches Werkzeug, um den NAM Unified Traffic Simulator (NAM-Simulator) mit der dazugeh&ouml;rigen Datenansicht nach Deinem Belieben zu konfigurieren.  Nur Aspekte des Simulators, welche absolut sicher f&uuml;r das Spiel sind, k&ouml;nnen vom Spieler durch TSCT modifiziert werden; wenn Du diesen Anweisungen folgst, brauchst Du keine Bef&uuml;rchtungen wegen irgendwelcher Nebeneffekte zu haben, egal welche Einstellungen Du auch benutzt.  Nat&uuml;rlich haben die Einstellungen, die im TSCT verf&uuml;gbar sind, gro&szlig;e Auswirkungen auf Dein Spiel und k&ouml;nnen das Einkommen Deiner Stadt ver&auml;ndern und Verkehrsstaus hervorrufen, welche wiederum weitere Effekte nach sich ziehen.  Eine detaillierte Erkl&auml;rung zu den einzelnen Feldern und den Verkehrssimulatoren im Allgemeinen findet sich hier (auf Englisch): <a href="For a more complete understanding of many of these fields, and of the traffic simulator in general, please see A Guide to the Operation of the Traffic Simulator." target="_blank">A Guide to the Operation of the Traffic Simulator</a>. <br>
+      <br>
+Da der NAM-Simulator grunds&auml;tzlich eine Version des Simulator Z ist, kann TSCT dazu verwendet werden, den Simulator Z zu ver&auml;ndern, falls dies Dein aktueller Simulator ist.  Das Ergebnis einer solchen Modifikation ist eine Version des NAM-Simulators, welcher komplett kompatibel zum Simulator Z ist.<br>
+<br>
+TSCT kann dazu verwendet werden, um Deine Version des NAM-Simulators auf die neueste Version zu aktualisieren, Einstellungen des NAM-Simulators und der dazugeh&ouml;rigen Datenansichten zu ver&auml;ndern, oder Deinen Verkehrssimulator auf einem der fr&uuml;heren Simulatoren einzustellen.  Obwohl der NAM-Simulator normalerweise zusammen mit dem Rest des NAM verwendet wird, braucht es den NAM nicht. TSCT kann also verwendet werden, um den NAM-Simulator mit den optionalen Datenansichten f&uuml;r ein Spiel zu installieren, ohne dass der NAM installiert ist.<br>
+<br>
+Dieses Benutzerhandbuch soll dabei helfen, den richtigen Verkehrssimulator auszuw&auml;hlen und zu modifizieren, wie alle Einstellungen des TSCT arbeiten und welche Effekte diese haben und der verschiedenen M&ouml;glichkeiten, die &Auml;nderungen zu speichern.  Beginnen wird das Handbuch mit der <strong>Basis-Netzwerkkapazit&auml;t</strong> und dem <strong>Netzwerk-Kapazit&auml;ts-Vervielfacher</strong>, welche die am meisten benutzten Einstellungen des TSCT sind.  Danach werden die Einstellungen in der Reihenfolge beschrieben, in der sie im Hauptfenster von TSCT auftauchen. </td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;Programmstart</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><p align="justify">Wenn Du das erste Mal TSCT startest, versucht das Programm, Deinen NAM-Installationsordner zu finden.  Bei Erfolg sucht es nach einem vorhandenen NAM-Simulator; wenn es einen gefunden hat, l&auml;dt es diesen und zeigt die Einstellungen im Hauptfenster an. Wenn es keinen NAM-Simulator in Deinem NAM-Installationsordner finden kann, zeigt es eine Nachricht diesbez&uuml;glich und l&auml;dt die Einstellungen f&uuml;r eine Standardversion des NAM-Simulators.<br>
+      <br>
+    Wenn TSCT Deinen NAM-Installationsordner nicht finden kann, es zeigt eine Nachricht dar&uuml;ber an und gibt Dir die M&ouml;glichkeit, &uuml;ber einen Dateiauswahl-Dialog den Ordner zu w&auml;hlen, oder mit einer Standardversion des NAM-Simulators zu starten, welche Du modifizieren und in einen beliebigen Ordner speichern kannst. Die dazugeh&ouml;rigen Datenansichten werden automatisch mit im selben Ordner gespeichert, in dem auch der Simulator gespeichert wurde. </p></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;Grundfunktionen</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><p>Bitte beachte, dass - obwohl alle &Auml;nderungen an den Verkehrssimulatoren sich sofort im Spiel auswirken - die Zeit, bis sich die &Auml;nderungen im Verkehrsschema einer Stadt bemerkbar machen, stark variieren kann, je nachdem, welche Einstellung ge&auml;ndert wurde<strong>. Einige Einstellungen machen sich sofort im Verkehrsschema bemerkbar, andere zeigen sich, wenn die n&auml;chste Pendelzeitberechnung durchgef&uuml;hrt wird (etwa alle vier bis sechs Spielmonate), und manche &Auml;nderungen machen sich erst nach bis zu acht Jahren bemerkbar.</strong> Langfristige &Auml;nderungen kann man an der Form des Verkehrsmengen-Graphen ablesen. Wenn das Diagramm stabile Werte &uuml;ber einen Zeitraum von mindestens zwei Jahren anzeigt, kannst Du davon ausgehen, das sich die &Auml;nderungen in Deiner Stadt vollst&auml;ndig manifestiert haben.<br>
+          <br>
+Im Abschnitt <strong>Kosten und Skalierungsfaktoren</strong> wird jeweils der Standardwert jedes Felds angegeben, was es einfacher macht, diese Werte bei Bedarf wiederherzustellen. Wie weiter oben bereits erw&auml;hnt, werden im Folgenden zuerst die <strong>Basis-Netzwerkkapazit&auml;t</strong> und der <strong>Netzwerk-Kapazit&auml;ts-Vervielfacher</strong> beschrieben, gefolgt von den anderen Einstellungen beginnend von oben im Hauptfenster.</p>
+    <p class="blau">Basis-Netzwerkkapazit&auml;t</p>
+    <p>Wenn Du zu einer anderen Standardkapazit&auml;t des NAM-Simulators wechseln willst, benutze die Auswahlbox &quot;Basis-Netzwerkkapazit&auml;t&quot; und w&auml;hle die Kapazit&auml;t, die Du verwenden m&ouml;chtest. (Diese Box befindet sich links, etwas unterhalb der Mitte, mit <span class="blau">blauer Schrift</span> versehen.) Die Kapazit&auml;ten reichen von &quot;Klassisch&quot; (die niedrigste) bis &quot;Ultra&quot; (die h&ouml;chste). Normalerweise w&auml;hlt man &quot;Klassisch&quot; f&uuml;r l&auml;ndliche Gegenden, w&auml;hrend &quot;Ultra&quot; f&uuml;r St&auml;dte mit mehreren Millionen Einwohnern gedacht ist. <br>
+      <br>
+      Die anderen Stufen (Niedrig, Mittel, Hoch) bieten Zwischenkapazit&auml;ten; welche Du davon verwendest, h&auml;ngt von der Gr&ouml;&szlig;e Deiner Stadt ab, wie viele &ouml;ffentliche Verkehrsmittel benutzt werden und wie viele Verbindungen Du zu Nachbarst&auml;dten besitzt. St&auml;dte mit viel &ouml;ffentlichem Nahverkehr brauchen eine niedrigere Kapazit&auml;t als St&auml;dte mit geringerer Nutzung des &ouml;ffentlichen Nahverkehrs. Sobald Du Deine Auswahl getroffen hast, werden die Kapazit&auml;ten, die dieser Stufe entsprechen, in der Zeile &uuml;ber der Auswahlbox direkt angezeigt.  <br>
+      <br>
+    Du kannst die Kapazit&auml;t des Simulators jederzeit ohne Probleme w&auml;hrend der Stadtentwicklung &auml;ndern. Nat&uuml;rlich darf das Spiel nicht laufen, wenn Du dieses Programm hier startest und irgendwelche &Auml;nderungen durchf&uuml;hren willst. Wenn Du gro&szlig;e St&auml;dte bauen und eine Kapazit&auml;t ben&ouml;tigst, die dies bewerkstelligen kann, ohne dass Du diese st&auml;ndig anpassen musst, dann wird die Einstellung &quot;Hoch&quot; am besten funktionieren.</p>
+    <p class="blau">Netzwerk-Kapazit&auml;ts-Vervielfacher</p>
+    <p>Wenn du einen Kapazit&auml;tslevel verwenden willst, der zwischen den f&uuml;nf Einstellungen liegt oder sogar au&szlig;erhalb, dann kannst Du Dies &uuml;ber den<strong> Netzwerk-Kapazit&auml;ts-Vervielfacher</strong> tun. Diese Einstellung multipliziert die Basis-Kapazit&auml;t mit dem Wert in der Einstellungsbox, welcher im Bereich von 0,1 bis 2,0 liegt.  Wenn du den Wert &auml;nderst, werden sofort die Netzwerk-Kapazit&auml;ten ge&auml;ndert, die sich in der Zeile dar&uuml;ber befinden. Damit der Simulator geeignete Werte hat, kann das Verh&auml;ltnis zwischen den verschiedenen Netzwerkkapazit&auml;ten nicht ge&auml;ndert werden. Allerdings variieren diese Verh&auml;ltnisse leicht zwischen den Basis-Netzwerkkapazit&auml;ten, bei Z&uuml;gen verh&auml;ltnism&auml;&szlig;ig mehr als bei den anderen Netzwerkkapazit&auml;ten.  Mit diesen Informationen kannst Du mit dem Netzwerk-Kapazit&auml;ts-Vervielfacher die Kapazit&auml;t einstellen, die Du m&ouml;chtest.<br>
+      <br>
+    F&uuml;r die meisten Kapazit&auml;ten-Level wird der Hintergrund in den Feldern mit der Beschriftung &quot;Kapazit&auml;ten&quot; gr&uuml;n sein. Es kann aber vorkommen, dass f&uuml;r h&ouml;here Kapazit&auml;ten das Feld zun&auml;chst gelb und sogar rot wird. Es ist kein Fehler, wenn diese Kapazit&auml;ten benutzt werden, aber es dient als Warnung, dass in der Verkehrsmengen-Ansicht sehr gro&szlig;e Werte angezeigt werden. Obwohl die Verkehrsmenge, die &uuml;ber ein Netzwerkfeld flie&szlig;en kann, unbegrenzt ist, kann die Verkehrsmengen-Ansicht (welche den Verkehr f&uuml;r eine Pendelzeit anzeigt) keine Werte &uuml;ber 64k-1 (65535) anzeigen.  Normalerweise zeigt die Verkehrsmengen-Ansicht bis zu 300% der Netzwerkkapazit&auml;t f&uuml;r eine Pendelzeit an (welche halb so gro&szlig; wie die Standard-Netzwerkkapazit&auml;t ist), bei der die Punkte als roter Strich dargestellt werden. <br>
+    <br>
+    Ist dieser Wert jedoch bei 300% &uuml;ber 64k, kann der Wert nicht angezeigt werden und die Farben der Verkehrsmengen-Ansicht wird so angepasst, dass der gr&ouml;&szlig;te Wert unter 64k ist.  (Diese Begrenzung beeinflusst auch das Verkehrsabfrage-Tool, wenn es &uuml;ber einem Netzwerkteil positioniert wurde.) In diesem Fall wird die Hintergrundfarbe des Feldes in TSCT gelb dargestellt. Wenn die Kapazit&auml;t so gro&szlig; ist, dass schon bei 200% der Netzwerkkapazit&auml;t f&uuml;r die Pendelzeit (in anderen Worten die volle Kapazit&auml;t f&uuml;r einen Tag) der Wert gr&ouml;&szlig;er als 64k ist, dann wird die Hintergrundfarbe des Feldes in rot dargestellt.  Wiederum wird das eigentliche Spiel nicht beeinflusst, da SimCity 4 gr&ouml;&szlig;ere Werte als 64k entsprechend behandelt und sie richtig in der Verkehrsstau-Ansicht anzeigt; nur die Verkehrsmengen-Ansicht und das Verkehrsabfrage Tool sind begrenzt.</p></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;&Ouml;ffentliche Verkehrsmittel</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><p class="text_zwischentitel">&Ouml;ffentliche Verkehrsmittel</p>
+      <p class="text_normal">Diese Auswahlbox reguliert die Nutzung der Sims von &ouml;ffentlichen Verkehrsmittel gegen&uuml;ber dem Auto. Es stehen sechs verschiedene M&ouml;glichkeiten zur Verf&uuml;gung, mit f&uuml;nf vordefinierten Einstellungen von &quot;Niedrig&quot; bis &quot;Sehr hoch&quot;. Die Auswahl &quot;Mittel&quot; entspricht der Einstellung von gro&szlig;en amerikanischen St&auml;dten mit m&auml;&szlig;ig genutzten &ouml;ffentlichen Verkehrsmitteln, w&auml;hrend die Auswahl &quot;Hoch&quot; vielen europ&auml;ischen St&auml;dten entspricht, mit einem gr&ouml;&szlig;eren Anteil an &ouml;ffentlichem Nahverkehr. Die aktuelle Entscheidung eines Sims (W-&sect;, W-&sect;&sect;, W-&sect;&sect;&sect;) f&uuml;r ein Verkehrsmittel wird in den neun ausgegrauten Feldern f&uuml;r die f&uuml;nf definierten Einstellungen angezeigt, die mit einer Auswahl sofort aktualisiert werden.<br>
+        <br>
+      Die erste Spalte zeigt den prozentualen Anteil der Sims, die &ouml;ffentliche Verkehrsmittel vorziehen, die zweite Spalte, die das Auto vorziehen und die dritte Spalte, die das Verkehrsmittel benutzen, welches am schnellsten ist. Bedenke, dass dies nur Vorlieben der Sims sind und nicht das Verkehrsmittel angeben, welches dann tats&auml;chlich verwendet wird. Wenn die Pendelzeit f&uuml;r zwei M&ouml;glichkeiten sehr dicht beieinander liegen, werden die Sims das Verkehrsmittel benutzen, welches ihnen lieber ist. Aber wenn eine M&ouml;glichkeit signifikant schneller als die andere ist, werden die Sims die schneller w&auml;hlen.  Es ist auch m&ouml;glich, die Prozentwerte f&uuml;r die Verwendung der Verkehrsmittel selbst zu modifizieren, indem die Auswahl &quot;Benutzerdefiniert&quot; gew&auml;hlt wird. Dann sind die Felder nicht mehr ausgegraut und k&ouml;nnen individuell modifiziert werden. Da die Benutzung in Prozent angegeben ist, muss jede Zeile zusammen 100% ergeben.</p>
+      <p class="text_zwischentitel">Separate Autobahn-Busspur</p>
+      <p class="text_normal">Dieses Feld erh&ouml;ht etwas die Geschwindigkeit der Busse auf Autobahnen, so dass die Anzahl der Sims, die den Bus benutzen, erh&ouml;ht wird. Diese M&ouml;glichkeit entspricht damit in etwa separaten Busspuren im wirklichen Leben. Die Automata-Anzeige wird jedoch nicht ver&auml;ndert, und so befinden sich weiterhin Autos auf allen Spuren, wenngleich die Anzahl der Busse auf den Autobahnen steigen sollte. Letztendlich werden die &quot;Busspuren&quot; also durch eine h&ouml;here Verkehrskapazit&auml;t der Autobahnen erreicht.</p>
+      <p class="text_zwischentitel">Park &amp; Ride</p>
+    <p class="text_normal">Dieses Feld &auml;ndert die Spielmechanik, so dass die Sims nicht mehr direkt mit dem Auto zu ihrem Arbeitsplatz fahren k&ouml;nnen. Stattdessen benutzen die Sims das Auto, um zu Parkpl&auml;tzen zu fahren, von wo aus sie entweder den Rest zu Fu&szlig; laufen oder (wesentlich effektiver) &ouml;ffentliche Verkehrsmittel benutzen. Im zweiten Fall musst Du Parkpl&auml;tze in der N&auml;he von &ouml;ffentlichen Verkehrsmittel bauen; sie am Rande von Wohngebieten zu platzieren kann sehr n&uuml;tzlich sein. Wenn diese Einstellung aktiviert ist und keine ausreichende Anzahl von Parkpl&auml;tze gebaut wurden, werden die Sims den Weg zur Arbeit mit dem Auto fahren und feststellen, dass sie dieses nirgendwo abstellen k&ouml;nnen. Als Folge kommen sie nicht an ihren Arbeitsplatz, werden entlassen, verlassen die Stadt und hinterlassen ihr verlassenes Haus.<br>
+      <br>
+    Die Parkpl&auml;tze, welche auf vielen Grundst&uuml;cken angezeigt werden, k&ouml;nnen nicht f&uuml;r die Park &amp; Ride-Funktion genutzt werden, sondern sind lediglich f&uuml;r die Optik da. Parkpl&auml;tze, die Teil von &ouml;ffentlichen Verkehrsmittel-Einrichtungen sind (z. B. der originale Bahnhof oder das Parkhaus von Maxis) sind funktional und k&ouml;nnen f&uuml;r Park &amp; Ride verwendet werden.</p>
+	
+	<p class="text_zwischentitel">Anteil des Busverkehrs am Verkehr</p>
+	
+	<p class="text_normal">Im Original Maxis Verkehrs Simulator nehmen Busse keinen
+	Anteil am Verkehrsstau; die Wegfindung wurde nicht sicher genug eingestellt, damit
+	dies funktioniert, wenngleich dies beabsichtigt war. Experimente zeigten, dass das
+	Einschalten dieses Feldes im Original Simulator einfach nur den bestehenden Verkehrsstau
+	erhöht, ohne aber signifikante Vorteile zu bringen.</p>
+      
+      <p class="text_normal">Im NAM-Simulator jedoch wurde die Wegfindung so
+	  eingestellt, dass sie sehr viel intelligenter ist als im Original Maxis 
+	  Verkehrssimulator und daher ist es nun m&ouml;glich, dass Busse ihren Beitrag am
+	  Verkehr haben k&ouml;nnen (wie jedes andere Verkehrsmittel auch) ohne Probleme
+	  zu verursachen. Als Resultat l&auml;uft die Verkehrssimulation im Ganzen sogar 
+	  wesentlich besser dadurch. Der Grund daf&uuml;r besteht darin, dass im Original
+	  Maxis Verkehrssimulator die Busse der letzte Ausweg als Verkehrsmittel darstellten;
+	  wenn Staus auf Strassen oder den meisten Schienen zu gross wurden, konnte der 
+	  Verkehrssimulator mehr Sims in Busse stecken und dadurch den Stau willk&uuml;rlich
+	  reduzieren, da alle Strassenteile eine unendliche Kapazit&auml;t f&uuml;r Busse
+	  besitzen. Dies war sehr unrealistisch and f&uuml;hrte dazu, dass die Sims ab und
+	  zu alles dem schnellen Transport mit dem Bus &uuml;berliessen, um Staus zu
+	  vermeiden.</p>
+      
+      <p class="text_normal">Der aktuelle NAM-Simulator verhindert dieses Problem,
+	  indem er dem Busverkehr erm&ouml;glicht am Verkehr teilzunehmen. Allerdings
+	  sind nun Busse, wie alle anderen Fahrzeuge in SimCity auch, nur 
+	  Ein-Personen-Fahrzeuge und so verlieren sie einiges ihrer N&uuml;tzlichkeit,
+	  da sie nicht mehr effizienter als Autos sind, um Sims zu transportieren. Aber
+	  sie sind nach vor sinnvoll f&uuml;r die Sims, welche die &ouml;ffentlichen 
+	  Verkehrsmittel bevorzugen und noch viel wichtiger als das, sind sie sehr effizient,
+	  um Sims zu Hochgeschwindigkeits-Verkehrsmittel zu bef&ouml;rdern (z.B. die
+	  verschiedenen Schienennetzwerke), wo keine Parkpl&auml;tze existieren. Obwohl
+	  also das Setzen dieses Attributs gewisse Nachteile mit sich bringt, arbeitet
+	  der Verkehrssimulator besser und bietet eine bessere Verkehrssimulation, wenn
+	  dieses Feld aktiviert ist, wie es im Original NAM-Simulator der Fall ist.</p>
+      
+      <p class="text_normal">Andererseits m&ouml;gen einige Leute das Verhalten
+	  des Original Maxis Verkehrssimulator oder wollen einfach nur die Benutzung
+	  von Bussen erh&ouml;hen. F&uuml;r diese Leute kann das Feld deaktiviert werden
+	  und das Verhalten des Original Maxis Verkehrssimulator wird bez&uuml;glich den
+	  Bussen wiederhergestellt. Wenn dies jedoch gemacht wird, wird die
+	  Brauchbarkeit der gesamten Verkehrssimulation als Resultat eingeschr&auml;nkt.
+	  Der Grad der Einschr&auml;nkung ist nur minimal und so lange man die
+	  Auswirkungen versteht, sollte das Deaktivieren des Feldes keine gr&ouml;sseren
+	  Probleme verursachen.</p>
+
+    </td>
+  </tr>
+  
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;Kosten und Skalierungsfaktoren</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><p class="text_zwischentitel">Monatliche Reisekosten pro Sim pro Feld</p>
+      <p class="text_normal">Diese Felder geben an, wieviel Geld Deine Stadt einnimmt, wenn jemand das namentlich angegebene Transportmittel benutzt. Sie werden &quot;Reisekosten&quot; genannt, weil nur &ouml;ffentliche Verkehrsmittel einen von Null abweichenden Wert haben. Wenn Du sie erh&ouml;hst oder erniedrigst, kannst Du damit die Reisekosten f&uuml;r jedes Transportmittel einstellen. Die Sims zahlen allerdings nicht wirklich diesen Betrag; die Stadt nimmt ihn nur ein. Dies ist eine Begrenzung der Simulation. Daher hat das &Auml;ndern der Reisekosten keinen Einfluss auf die Benutzung der Verkehrsmittel f&uuml;r einen Sim. Stattdessen kannst Du diese Einstellung verwenden, um mehr Einnnahmen in Deiner Stadt zu erzeugen, um das Spiel einfacher zu machen, oder um die Reisekosten f&uuml;r &ouml;ffentliche Verkehrsmittel zu senken und damit das Spiel schwerer zu machen.<br>
+        <br>
+      Diese Einstellungen arbeiten in einer interessanten Art und Weise, da die Reisekosten dauerhaft mit dem Netzwerkteil beim Bau verkn&uuml;pft werden. D. h. wenn Du die Reisekosten &auml;nderst und Dein Spiel startest, wirst Du keine &Auml;nderung im monatlichen Einkommen feststellen. Lediglich die neu gebauten Netzwerkteile werden die neuen Reisekosten haben.  Diese Eigenschaft erlaubt, die Reisekosten auf eine besondere Weise zu nutzen. Nehmen wir an, Du willst eine Mautstra&szlig;e bauen, aber anstatt die unhandlichen Mautstellen zu benutzen (welche <em>so</em> altmodisch sind), kannst Du ein modernes Mautsystem installieren, welches das Transportmittel automatisch detektiert und die Einnahmen erzeugt, abh&auml;ngig von der gefahrenen Strecke.<br>
+      <br>
+      Ferner kannst Du unterschiedliche Reisekosten f&uuml;r Auto, Bus und LKWs festlegen. Mit den Feldern ist dies einfach  umzusetzen. Du setzt die Bus-Reisekosten auf den normalen Wert plus Deinem Mautwert und ebenso f&uuml;r Auto und LKW. Dann startest Du das Spiel, baust Deine Mautstra&szlig;en, speicherst, beendest es und stellst die Reisekosten wieder auf den normalen Wert. Nun hast Du eine Mautstra&szlig;e in Deinem Spiel, welche Deine eingestellten Mautgeb&uuml;hren f&uuml;r jeden liefert, der dar&uuml;ber f&auml;hrt. Keine Reduzierung der Verkehrsgeschwindigkeit, kein Verkehrsstau - einfach nur eine stille Mautabrechnung.<br>
+      <br>
+      Es gibt weitere ungeahnte M&ouml;glichkeiten. Du kannst auch Fu&szlig;g&auml;nger zur Mautabgabe bewegen, wenn sie &uuml;ber Deine Stra&szlig;e laufen. Und Du kannst Maut-Br&uuml;cken, Maut-Tunnel und Maut-Stra&szlig;en mit anderen Verkehrsmittel einrichten. Du kannst auch Parkpl&auml;tze oder Parkh&auml;user f&uuml;r die Sims kostenpflichtig gestalten. Platziere diese ein Feld hinter der Stra&szlig;e und verbinde sie mit einem Stra&szlig;enteil, welcher kostenpflichtig ist. Du nimmst nun f&uuml;r jeden Sim, der auf den Parkplatz f&auml;hrt oder ihn verl&auml;sst, eine entsprechende Geldsumme ein.</p>
+      <p class="text_zwischentitel">Monatliche Kosten pro Netzwerkfeld</p>
+      <p class="text_normal">Diese Felder legen fest, wieviel Deine Stadt f&uuml;r jedes Netzwerkfeld pro Monat an Unterhalt zahlen muss. Im Gegensatz zu <strong>Monatliche Reisekosten pro Sim pro Feld</strong> werden diese &Auml;nderungen sofort &uuml;bernommen, wenn Du das n&auml;chste Mal das Spiel startest. Normalerweise sind diese Kosten Unterhaltskosten. Aber sie k&ouml;nnen auch als Baukosten gehandelt werden, da diese nicht im Verkehrssimulator verf&uuml;gbar sind. In der Wirklichkeit zahlt kein Staat in bar f&uuml;r gro&szlig;e Verkehrsprojekte, warum sollte Deine Stadt das tun? Stattdessen nimmt die Regierung sehr oft Kredite auf. So kannst Du festlegen, dass die monatlichen Kosten zur Abzahlung der Kredite verwendet werden. Und da diese Kreditzahlungen ewig andauern, sind sie monatlich zu entrichten (oder bis das Netzwerkfeld abgerissen wird).  Mit einer &Auml;nderung der Felder im Bereich Monatliche Kosten pro Netzwerkfeld, kann das Spiel schnell einfacher oder schwieriger gemacht werden.</p>
+	  <p class="text_normal">Dir wird auffallen, dass die monatlichen Kosten f&uuml;r die 
+	  RHW Netzwerkfelder auf null gesetzt sind und die Einstellung nicht ge&auml;ndert
+	  werden kann. Der Grund daf&uuml;r ist, dass RHW auf einem unbenutzten Netzwerk
+	  basiert, welches unvollendet in SC4 von Maxis implementiert wurde. Eines dieser
+	  unvollendeten Dinge im Netzwerk sind die monatlichen Kosten pro Netzwerkfeld und
+	  obwohl dieser Wert intern im Verkehrs-Simulator gesetzt werden kann, wird sich das
+	  Spiel immer so verhalten, als ob der Wert null w&auml;re. </p>	  
+      <p class="text_zwischentitel">Kunden-Verkehrsl&auml;rm-Faktor</p>
+      <p class="text_normal" align="justify">Dieses Feld legt fest, in welchem Umfang sich Verkehrsl&auml;rm auf Kunden von Gesch&auml;ften sowie die Anwohner von Wohngebieten auswirkt. Verkehrsl&auml;rm wird von Fu&szlig;g&auml;ngern, Autos, Bussen und LKWs verursacht, die eine Stra&szlig;e benutzen (mit Ausnahme von Autobahnen). Verkehrsl&auml;rm ist gut f&uuml;r das Gewerbe; die Anzahl der Kunden ist direkt proportional zum Umkehrwert dieses Faktors, das bedeutet, dass ein bestimmter prozentualer Anstieg oder Abfall dieses Werts &uuml;ber den gesamten Bereich des Faktors den gleichen Effekt auf die St&auml;rke des Verkehrsl&auml;rms hat. Die Anzahl der Kunden eines Gewerbebetriebs wird also nach der folgenden Formel berechnet:</p>
+      <p align="center" class="text_zwischentitel">Kunden = Faktor * Verkehrssmenge</p>
+      <p align="justify" class="text_normal">&quot;Verkehrsmenge&quot; ist dabei der Maximalwert des Pendelverkehrs am Morgen auf den angrenzenden Feldern. Die Schwelle f&uuml;r &quot;mittlere&quot; Kunden liegt dabei bei 152, &quot;viele&quot; Kunden gibt es ab einem Wert von 215, und der Maximalwert ist 255. (Weiterf&uuml;hrende Informationen finden sich hier (auf Englisch): <a href="http://sc4devotion.com/forums/index.php?topic=10261.msg310570#msg310570" target="_blank">A
+          Guide to the Operation of the Traffic Simulator</a>.) Der folgende
+		  Graph zeigt den Grenzwert f&uuml;r mittlere und hohe Kundenlevel 
+		  gegen&uuml;ber dem inversen des Faktor. (Der Graph wurde freundlicherweise
+		  von Trias zur Verf&uuml;gung gestellt, daher in Englisch.)</p>
+		  <br>
+		  <div style="text-align: center;">
+			<img style="width: 607px; height: 328px;" alt="" 
+			src="images/customerTrafficNoise.png">
+		  </div>
+        <br>
+		<p align="justify" class="text_normal">
+        Auf Wohngebiete hat Verkehrsl&auml;rm den umgekehrten Effekt. Je st&auml;rker der Verkehrsl&auml;rm, desto weniger attraktiv werden die anliegenden Wohngeb&auml;ude (die Anzahl der Kunden beim Gewerbe entspricht direkt der jeweiligen Attraktivit&auml;t). Jedoch ist dieser Effekt bei Wohngebieten deutlich schw&auml;cher ausgepr&auml;gt als beim Gewerbe, das hei&szlig;t also, dass eine Steigerung dieses Werts sich auf jeden Fall positiv auf die Wirtschaft einer Stadt auswirkt. Dienstleistungsunternehmen profitieren st&auml;rker als B&uuml;ros, und bei beiden Typen werden die h&ouml;heren Wohlstandsstufen st&auml;rker beeinflusst als die niedrigen. Dies gilt wiederum auch bei den unterschiedlichen Wohlstandsstufen von Wohngeb&auml;uden, allerdings ebenfalls in geringerem Ma&szlig;e als beim Gewerbe<br>
+        <br>
+        Zusammenfassend betrachtet kann dieser Wert also einen starken Effekt auf die Wirtschaft einer Stadt haben. Der Maximalwert von 3,000 kann eine bedeutende wirtschaftliche Expansion bedeuten, wobei die gesteigerte Aktivit&auml;t und der Verkehrsl&auml;rm einen negativen Effekt auf die Wohngebiete haben kann, speziell auf die W-&sect;&sect;&sect;-Geb&auml;ude. Beim Minimalwert von 0,001 sinkt die Gesch&auml;ftst&auml;tigkeit signifikant, und es kann zu einer massiven Rezession oder sogar Depression kommen. Andererseits steigt dadurch die Attraktivit&auml;t f&uuml;r reiche Wohngeb&auml;ude stark an, wobei die Sims jedoch Schwierigkeiten haben k&ouml;nnten, einen Job zu finden, so dass sie dennoch die Stadt verlassen. (Standardwert: 0,250)</p>
+		
+      <p class="text_zwischentitel">Zwischenhalt-Effekt-Vervielfacher</p>
+      <p class="text_normal">SimCity 4 simuliert Geschwindigkeitsreduktionen, verursacht durch Ampeln, Stopschilder und Abbiegeverkehr, indem die Netzwerkkapazit&auml;t bei Kreuzungen und den anliegenden zwei Feldern reduziert wird. Dies bedeutet, dass an Kreuzungen mit viel Verkehr Staus entstehen, die den Verkehr bremsen. Begrenzt durch die Art, wie der Simulator arbeitet, kann der Verkehr nicht f&uuml;r weniger als sechs Sekunden gebremst werden, was k&uuml;rzer als jede Wartezeit an einer Ampel ist. Trotzdem wird die Verkehrskapazit&auml;t reduziert, was in der Verkehrsstau-Ansicht rot dargstellt wird. Standardm&auml;&szlig;ig hat der NAM-Simulator diesen Effekt so gesetzt, dass ein Stau nur an wirklich stark befahrenen Kreuzungen eintritt. Wo auch immer an Kreuzungen alles gr&uuml;n in der Verkehrsstau-Ansicht ist, wird der Verkehr nicht gebremst; effektiv wird der Verkehr hier also nicht beeinflusst. <br>
+        <br>
+      Diese Feld erlaubt Dir, die St&auml;rke der Beeinflussung so zu &auml;ndern, dass die Verkehrskapazit&auml;t entsprechend gesenkt wird. Eine gr&ouml;&szlig;ere Zahl reduziert die Kapazit&auml;t an Kreuzungen, d. h. verst&auml;rkt den Einfluss auf den Verkehr; eine kleinere Zahl reduziert den Effekt. Der Einfluss kann fast abgeschaltet werden, wenn die Zahl auf 0,2 gesetzt wird, welches den kleinsten Wert darstellt. Der Grund, dass der Wert nicht auf 0 gesetzt werden kann, ist, dass an Kreuzungen immer ein geringer Effekt vorhanden ist. Es ist notwendig, diesen Effekt immer zu haben, um kompatibel mit dem NWM zu sein, wo viele Teile dem Spiel gegen&uuml;ber als eine Serie von Kreuzungen aufgefasst werden. (Standardwert: 1,0)</p>
+	  
+      <p class="text_zwischentitel">Pendelzeitgraph-Skalierungsfaktor</p>
+      <p class="text_normal"><strong>Achtung: Der Pendelzeitgraph-Skalierungsfaktor ist nicht korrekt in SimCity 4 implementiert und so ist es unm&ouml;glich, diesen so zu konfigurieren, dass korrekte Werte ermittelt werden.</strong> Allerdings m&ouml;gen viele Leute diesen Graphen benutzen, und im Einzelfall kann er hilfreiche Informationen geben. <br>
+        <br>
+      Der originale Verkehrssimulator von Maxis (wie auch alle Versionen der Simulatoren C, D und E) erlauben den Sims eine Zeit von sechs Minuten, um von ihrem Haus zum Arbeitsplatz zu kommen. Dies scheint verdammt kurz, auch f&uuml;r den Maxis Simulator, wenn man bedenkt, dass dieser Wert im Original-Pendelzeitgraph noch mit 25 multipliziert wird. Das Verh&auml;ltnis von 25:1 wird auch im Prima-Handbuch erw&auml;hnt, welches angibt, dass die Sims 2,5 Stunden haben, zum Arbeitsplatz zu gelangen - exakt 25 mal sechs Minuten. Du kannst den Original-Faktor f&uuml;r den Pendelzeitgraph wiederherstellen, wenn Du den Wert auf 1 setzt. Allerdings bekommst Du unter Umst&auml;nden enorm hohe Werte im Graphen, da der NAM-Simulator die Pendelzeit nicht auf sechs Minuten begrenzt. <br>
+      <br>
+      Du nimmst an, die aktuelle Pendelzeit zu sehen und setzt diesen Wert auf 0,04, welches 1/25 ist. Dies wird in kleinen St&auml;dten ohne Nachbarn funktionieren. Es wird einige Merkw&uuml;rdigkeiten geben, wie die Pendelzeit berechnet wird und dies wird in gr&ouml;&szlig;eren St&auml;dten deutlich werden. Das Gesamtbild &auml;ndert sich, wenn Nachbarst&auml;dte existieren. Die durchschnittliche Pendelzeit vergr&ouml;&szlig;ert sich proportional zur Verkehrsmenge zwischen den St&auml;dten. Dies klingt vern&uuml;nftig in der Theorie, aber in der Praxis kann die Pendelzeit schnell bei zw&ouml;lf Stunden f&uuml;r eine Strecke liegen, auch mit einem Faktor von 0,04.  <br>
+      <br>
+      Aus diesem Grund ist der Skalierungsfaktor auf 0,015 gesetzt. Dies berechnet eine Pendelzeit, die zu kurz f&uuml;r eine kleine Stadt ist, aber zu lang f&uuml;r eine gro&szlig;e Stadt mit vielen Verkehrsanbindungen. F&uuml;r durchschnittliche St&auml;dte mit durchschnittlichem Verkehr zu Nachbarst&auml;dten ist die Pendelzeit in etwa korrekt. Du siehst, die Pendelzeit variiert sehr zwischen einer Stadt und der n&auml;chsten, obwohl diese sehr &auml;hnlich aussehen m&ouml;gen, aber unterschiedlichen Verkehr hinein und hinaus besitzen.  Auf jeden Fall kann der Pendelzeit-Skalierungsfaktor eingestellt werden, auf den Wert, der Dir richtig erscheint. Du kannst diesen von Stadt zu Stadt einstellen, auch in derselben Region. <br>
+      <br>
+      Um verl&auml;ssliche Informationen &uuml;ber die Pendler zu erhalten, sind das Verkehrsabfrage-Tool, die Verkehrs-Statistik und die Verkehrs-Ansicht weit  hilfreicher als die Pendelzeitanzeige. (Bedenke, dass die Verkehrs-Ansicht die Anzahl der Fahrten anzeigt, nicht die Pendelzeit. Auch Sims, die verschiedene Verkehrsmittel benutzen, um zur Arbeit zu gelangen, werden in verschiedenen Positionen auf diesem Graph angezeigt.) (Standardwert: 0,015)</p>
+	  
+	  <p class="text_zwischentitel">Pendelweg-Maximalzeit</p>
+	  <p class="text_normal">Diese Feld spzifiziert die maximale Zeit in Minuten, die 
+	  einem Sim erlaubt wird den Arbitszplatz im morgendlichen Verkehr zu erreichen.
+	  (Die abendliche R&uuml;ckfahrt hat niemals irgendein Zeitlimit.) Dies ist das
+	  einzigste Feld, das im Traffic Simulator Configuration Tool ausgegraut ist und
+	  das r&uuml;hrt daher, dass der Wert in diesem Feld extrem negative Konsequenzen
+	  haben kann, wenn er zu tief eingestellt wird. Das Feld kann aktiviert werden, 
+	  indem das Kontrollfeld daneben selektiert wird. Der Standardwert ist 600, welcher
+	  in 10 Stunden umgewandelt wird und sehr lang zu sein scheint und einen 
+	  unm&ouml;glichen langen Arbeitstag f&uuml;r einen Sim bedeuten w&uuml;rde. Wie
+	  auch immer vergeht die Zeit im Spiel nicht so, wie man es erwarten w&uuml;rde,
+	  wenn der Verkehr in Nachbarst&auml;dte fliesst; dieser Effekt wurde im
+	  vorangegangenen Kapitel, <b>Pendelzeitgraph-Skalierungsfaktor</b> diskutiert.
+	  Bevor der Wert f&uuml;r die perfekte Wegfindung gefunden wurde, verwendete man
+	  einen Wert in dieser H&ouml;he f&uuml;r eine effektive Zwischenst&auml;dtische 
+	  Bewegung. Obwohl dies nicht mehr der Fall ist, h&ouml;here Werte wie 600 zu
+	  verwenden, scheint es einen geringen positiven Effekt auf die Stadtgesundheit
+	  ohne negativen Effekt zu haben. Den Wert &uuml;ber 600 zu erh&ouml;hen scheint
+	  keinen weiteren Effekt zu haben.
+	  <br>
+	  <br>
+	  Was hat es f&uuml;r einen Effekt, den Wert zu senken?
+	  Wenn der Wert unter 600 gesenkt wird, findet ein kleiner R&uuml;ckgang im
+	  generellen Gesundheitslevel der Stadt statt. Dieser R&uuml;ckgang ist wirklich
+	  gering und kann nur festgestellt werden, indem der Populations &amp; Job Graph
+	  &uuml;ber mehrere Jahre beobachtet wird.
+	  <br>
+	  <br>
+	  Wenn der Wert herunter auf einen zweistelligen Wert gesenkt wird, tritt ein
+	  gr&ouml;sserer Effekt auf. Normalerweise sind alle Pendelzeiten innerhalb einer
+	  Stadt Kurz und zu benachbarten St&auml;dten Lang. Kurze Pendelzeiten geben eine
+	  leichte Erh&ouml;hung auf die Attraktivit&auml;t von Wohngebieten f&uuml;r die
+	  Sims, w&auml;hrend Lange Pendelzeiten eine leichte Erniedrigung auf die 
+	  Attraktivit&auml;t aus&uuml;ben. Mittlere Pendelzeiten haben keinen Effekt auf
+	  die Attraktivit&auml;t.
+	  <br>
+	  <br>
+	  Wenn die <b>Pendelweg-Maximalzeit</b> niedriger wird, werden einige Lange
+	  Pendelzeiten in der Stadt zu Mittleren Pendelzeiten, was den bisherigen
+	  Bewohnern es nur noch weniger Attraktiv macht gegen&uuml;ber den Bewohnern 
+	  mit Kurzen Pendelzeiten. Wenn die <b>Pendelweg-Maximalzeit</b> noch tiefer
+	  wird, verschwinden einige Lange Pendelwege und die Bewohner mit diesen
+	  Pendelwegen haben eine noch geringere Attraktivit&auml;t. Jobs mit einem 
+	  Langen Pendelweg in der aktuellen Stadt verlieren ihre eingebaute 
+	  Attraktivit&auml;t gegen&uuml;ber Jobs in den Nachbarst&auml;dten, so dass
+	  paradoxerweise ein niedriger Bereich der <b>Pendelweg-Maximalzeit</b> 
+	  ensteht, bei dem es attraktiver f&uuml;r viele Sims ist, nach Jobs in den
+	  benachbarten St&auml;dten zu suchen als in der eigenen Stadt. Dies 
+	  verst&auml;rkt allerdings auch den allgemeinen Pendelverkehr, der in der 
+	  Region vorhanden ist.
+	  <br>
+	  <br>
+	  Sobald die <b>Pendelweg-Maximalzeit</b> in den einstelligen Bereich f&auml;llt
+	  (und manchmal auch kurz davor), verschwindet die M&auml;glichkeit der Sims einen
+	  Job zu finden, der ihrer Qualifikation entspricht, weil nicht mehr Zeit gegeben
+	  wird, um ihn zu erreichen. Wenn dies passiert, erscheint das Kein-Arbeitsplatz
+	  Symbol &uuml;ber den H&auml;usern der Sims, und falls dieser Zustand &uuml;ber
+	  6 Monate andauert, verlassen die Sims die Stadt und ihr Haus zerf&auml;llt 
+	  &uuml;ber die Jahre hinweg. Bei diesem Level der <b>Pendelweg-Maximalzeit</b>
+	  werden die Verkehrsrouten und Staus sehr viel wichtiger, weil jede Sekunde
+	  z&auml;hlt, dass die Sims ihren Job behalten oder nicht. Die gesamte Situation
+	  wird dann zu einer Herausforderung, aber weil dies vielen Leuten gef&auml;llt,
+	  wurde diese Option im Traffic Simulator Configuration Tool intgeriert.
+	  <br>
+	  <br>
+	  Im Original Spiel liegt die <b>Pendelweg-Maximalzeit</b> bei 6 Minuten. Im
+	  Traffic Simulator Configuration Tool kann sie bis auf 1 Minute herunter 
+	  gesetzt werden.
+	  </p>
+	  
+      <p class="text_zwischentitel">Fahrzeug-Luftverschmutzung</p>
+    <p class="text_normal">Diese Feld spezifiziert den Anteil der normalen Verkehrsverschmutzung, wenn die Verordnung &quot;Saubere Luft&quot; aktiviert ist. Normalerweise beeinflusst die Verordnung die Fahrzeug-Luftverschmutzung &uuml;berhaupt nicht; und auch die Auto-Emmisions-Reduzierung hat keine Auswirkung. Stattdessen ver&auml;ndern diese Verordnungen alle anderen Typen der Luftverschmutzung <strong>au&szlig;er</strong> der Fahrzeug-Luftverschmutzung. Jede der Verordnungen reduziert die Luftverschmutzung um 10%; der Effekt dieser beiden Verordnungen ist kumulativ. <br>
+      <br>
+    Einige Leute haben bemerkt, dass auch in der unmodifizierten SimCity 4-Version die Fahrzeug-Luftverschmutzung so stark ist, dass man die Luftverschmutzungs-Ansicht dazu verwenden kann, die Stra&szlig;enz&uuml;ge auf der Karte zu sehen. Mit dem Hinzuf&uuml;gen von zus&auml;tzlichen Geb&auml;uden, welche eine dichtere Bebauung erlauben, und mit den h&ouml;heren Verkehrskapazit&auml;ten der Verkehrssimulatoren, die diese unterst&uuml;tzen, wurde das Problem noch schlimmer. Dies ist der Grund, warum im NAM-Simulator die Verordnung &quot;Saubere Luft&quot; die Fahrzeug-Verschmutzung um 60% reduziert. <br>
+    <br>
+    Du magst vielleicht denken, dass dies zu viel ist. Oder Du willst die Verkehrsverschmutzung komplett entfernen, um eine &quot;Gr&uuml;ne Stadt&quot; zu haben. Dieses Feld erlaubt Dir, die Fahrzeug-Luftverschmutzung auf einen Wert nach Deinem Belieben zu setzen. Du kannst den Wert auch auf Null setzen oder so hoch setzen, dass Du die doppelte Menge an Fahrzeug-Luftverschmutzung erh&auml;ltst wie in einem Standardspiel. Diese letzte M&ouml;glichkeit ist n&uuml;tzlich, wenn Du eine Stadt bauen willst, in der die Reduzierung der Luftverschmutzung auf taube Ohren st&ouml;&szlig;t. (Standardwert: 0,4)</p></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;Statistik-Ansicht</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><p class="text_zwischentitel">Verwende neue U-Bahn-Ansicht</p>
+      <p class="text_normal">Beginnend mit dem NAM vom Juni 2009 zeigt die U-Bahn-Ansicht (in der Du U-Bahnen baust) automatisch die Verkehrsmenge f&uuml;r die U-Bahnen in den Farben an, die auch in der Verkehrsmengen-Ansicht verwendet werden. Sie zeigt auch grunds&auml;tzlich alle U-Bahn-Stationen an. Dies kann sehr n&uuml;tzlich sein, wenn entschieden werden muss, wo neue U-Bahnen gebaut werden sollen. Allerdings m&ouml;chten einige Leute diese Ansicht nicht. Ist das Feld deaktiviert, wird die neue U-Bahn-Ansicht nicht verwendet.</p>
+      <p class="text_zwischentitel">Verwende neue U-Bahn-Geb&auml;ude-Ansicht</p>
+      <p class="text_normal">Beginnend mit dem NAM vom Juni 2009 wurde die U-Bahn-Geb&auml;ude-Ansicht (in der Du U-Bahn-Stationen baust) dramatisch ge&auml;ndert. Die gr&ouml;&szlig;te &Auml;nderung in der neuen U-Bahn-Geb&auml;ude-Ansicht ist, dass Geb&auml;ude nicht angezeigt werden, so dass es einfacher ist, U-Bahn-Stationen in dichten Bereichen der Stadt zu bauen. Um zur originalen U-Bahn-Geb&auml;ude-Ansicht von Maxis zur&uuml;ckzukehren, muss dieses Feld deaktiviert sein.</p>
+      <p class="text_zwischentitel">Zeige U-Bahn-/Hochbahn-/Tram-Dichte</p>
+      <p class="text_normal">Diese Feld ist nur verf&uuml;gbar, wenn <strong>Verwende neue U-Bahn-Geb&auml;ude-Ansicht</strong> aktiviert ist; ansonsten ist es ausgegraut. Wenn diese Option aktiviert ist, werden U-Bahn-, Hochbahn- und Tram-Dichten angezeigt, wie in der Verkehrsmengen-Ansicht.</p>
+      <p class="text_zwischentitel">Verwende neue Zonen-Ansicht</p>
+      <p class="text_normal">Beginnend mit dem NAM vom Juni 2009 wurde die Zonen-Ansicht so ver&auml;ndert, dass nicht nur die Zonen angezeigt werden.  Es wird nun alles angezeigt, was in in der U-Bahn-Geb&auml;ude-Ansicht angezeigt wird, au&szlig;er der Eisenbahn-Verkehrsmenge. Um die originale Zonenansicht von Maxis wiederherzustellen, muss dieses Feld deaktiviert werden.</p>
+      <p class="text_zwischentitel">Zeige U-Bahn-Linien</p>
+      <p class="text_normal">Diese Feld modifiziert die Zonen-Ansicht; wenn die Option <strong>Verwende neue Zonen-Ansicht</strong> deaktiviert ist, ist dieses Feld ausgegraut. Normalerweise werden die U-Bahn-Linien in der neuen Zonen-Ansicht angezeigt. Wenn dieses Feld deaktiviert ist, werden diese nicht angezeigt.</p>
+      <p class="text_zwischentitel">Zeige Props</p>
+    <p class="text_normal">Dieses Feld modifiziert ebenfalls die neue Zonen-Ansicht; wenn die Option <strong>Verwende neue Zonen-Ansicht</strong> deaktiviert ist, ist dieses Feld ausgegraut. Normalerweise werden Props in der Zonen-Ansicht angezeigt. Wenn die Option deaktiviert ist, werden sie nicht angezeigt.</p></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;&Auml;nderungen speichern</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal">Wenn Du mit den &Auml;nderungen am Simulator fertig bist, dann klicke auf die &quot;Speichern&quot;-Schaltfl&auml;che. Der ver&auml;nderte Simulator wird in dem Ordner gespeichert, aus dem er zuvor geladen wurde. Wenn irgendwelche Datenansichten ver&auml;ndert wurden, werden diese automatisch mit gespeichert. Wenn Du den <strong>Netzwerk-Kapazit&auml;ts-Vervielfacher</strong> von dem Standardwert 1,0 ver&auml;ndert hast, werden automatisch neue Verkehrsmengen-Ansichten bei der Speicherung generiert. <br>
+      <br>
+      Wenn bereits ein Standard-Verkehrssimulator im Ordner vorhanden ist, wirst Du gefragt werden, ob dies Dein aktiver Verkehrssimulator-Ordner ist (normalerweise Dein NAM-Installationsordner). Wenn Du mit &quot;Ja&quot; antwortest, werden existierende Verkehrssimulatoren gel&ouml;scht; wenn ein modifizierter Simulator existiert (z. B. der mit diesem Programm erzeugt wurde), wird er umbenannt mit der Erweiterung &quot;.sav&quot; und eventuell einer fortlaufenden Nummer. Dasselbe passiert, wenn die Verkehrsmengenansicht ge&auml;ndert wurde.  <br>
+      <br>
+    Wenn Du keinen NAM-Ordner oder einen bestehenden Simulator zum &Auml;ndern angegeben hast, wirst Du nach Dr&uuml;cken der &quot;Speichern&quot;-Schaltfl&auml;che mit einem Dateiauswahl-Dialog aufgefordert, den Ordner zu w&auml;hlen, in dem die Dateien gespeichert werden sollen. Du kannst auch &quot;Speichern unter...&quot; im Datei-Men&uuml; benutzen, um einen anderen Ordner zum Speichern zu verwenden. Wenn Du Deinen Simulator modifizierst und feststellst, dass diese &Auml;nderungen nicht gewollt sind, dann klicke auf die &quot;Reset&quot;-Schaltfl&auml;che. Damit kannst Du alle Felder auf den Stand setzen, als der Simulator geladen oder erzeugt wurde, oder auf die Standard-Werte.
+    <p class="text_zwischentitel">Backups</p>
+    <p class="text_normal">Wenn die automatischen Backups aktiviert sind, wird bei jeder &Auml;nderung automatisch eine Sicherheitskopie des jeweils geladenen Verkehrssimulators angelegt (siehe dazu auch den Abschnitt &quot;Konfiguration&quot; weiter unten). Nur Dateien, deren Standardwerte ge&auml;ndert wurden, werden gesichert, da die Standard-Simulatoren sehr leicht durch das Ausw&auml;hlen der entsprechenden Optionen in TSCT und aus diesem Benutzerhandbuch wiederhergestellt werden k&ouml;nnen. Alle Sicherheitskopien werden im Unterordner <strong>Backup</strong> des TSCT-Installationsordners gespeichert, mit der Dateiendung .sav anstelle der standardm&auml;&szlig;igen .dat-Erweiterung. Falls mehr als ein Backup angelegt werden soll (die Standardeinstellung ist 5), wird an die &auml;lteren Backups jeweils noch eine Zahl angeh&auml;ngt, also z. B. .sav1 f&uuml;r die n&auml;chst&auml;ltere Datei. Die Datei mit der Erweiterung .sav ohne angeh&auml;ngte Zahl ist dabei immer das j&uuml;ngste Backup. Falls mehr als die eingestellte Anzahl von Backups vorhanden sind, werden &auml;ltere Dateien automatisch gel&ouml;scht. Ob die Backup-Funktion eingeschaltet ist, kannst Du an der entsprechenden Anzeige links unten neben dem Button zum Speichern erkennen. Ist sie eingeschaltet, erscheint der Text "Auto-Backup: <span class="gruen">Ein</span>", ansonsten wird &quot;Auto-Backup: <span class="rot">Aus</span>" angezeigt.</td>
+  </tr>
+  <tr>
+    <td class="text_normal"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;Benutzen des Traffic Simulator Configuration Tool zur Nachbildung &auml;lterer Traffic-Simulatoren</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><p>TSCT kann dazu verwendet werden, um einen Traffic Simulator zu emulieren, der relativ genau den Simulatoren aus &auml;lteren NAM-Ver&ouml;ffentlichungen entspricht, speziell den Simulatoren A bis E und deren Varianten (da TSCT den Kern von Simulator Z als Basis benutzt, ist f&uuml;r diesen Simulator keine Emulation erforderlich). Dieser Abschnitt beschreibt, welche Einstellungen n&ouml;tig sind, um eine solche Emulation zu erreichen. Wenn Du verschiedene Einstellungen ausprobierst und sp&auml;ter feststellst, dass sie in Deiner Stadt nicht funktionieren, &auml;ndere sie einfach wieder; es sollte kein dauerhafter Schaden bei der Benutzung anderer Werte zur&uuml;ckbleiben, abgesehen davon, dass es immer eine Weile dauert, bis sich die neuen Werte eingependelt haben.<br>
+      <br>
+      Es ist wichtig zu wissen, dass die Auslastung der verschiedenen &ouml;ffentlicehn Verkehrsmittel beim Einsatz eines emulierten Simulators anders als das sein kann, was Du bisher gewohnt warst. Wenn Du z. B. viel Schienenverkehr hast, kann die Auslastung der Busse sinken. Der Grund f&uuml;r diesen Unterschied ist einfach: Die Sims sind nun schlauer bei der Wahl eines Verkehrsmittels. Sie sollten bei der Fahrt zur Arbeit fast immer die jeweils schnellste Route nehmen. Falls Du also Buslinien hast, die parallel zum Schienenverkehr laufen, werden die Sims den Zug nehmen, da er schneller ist. Eine einfache M&ouml;glichkeit, die Bus-Auslastung zu steigern, ist der Bau von weiteren Bushaltestellen, und im Gegenzug die Bahnh&ouml;fe und Haltepunkte in gr&ouml;&szlig;eren Abst&auml;nden zu setzen. Beachte dabei auch, dass das Spiel Stra&szlig;enbahnen zu den Z&uuml;gen z&auml;hlt, und nicht zu den Stra&szlig;enverkehrsmitteln. Evtl. hilft es auch, die Option  <strong>Autobahn-Busspuren</strong> zu aktivieren, wobei die Sims manchmal besonders schlau sind und die schnellen Autobahn-Busse verwenden, um rascher zum n&auml;chsten Bahnhof zu gelangen.<br>
+  <br>
+  <span class="text_zwischentitel">Empfohlene Einstellungen f&uuml;r die Emulation &auml;lterer Simulatoren</span></p>
+      <p>F&uuml;r <em>all</em>e &auml;lteren Simulatoren sollte die Option <strong>Busse
+	  tragen zum Verkehr bei</strong> deaktiviert, die
+	  <strong>Fahrzeug-Luftverschmutzung</strong> auf den Wert von 0.90, und der <strong>Pendelzeitgraph-Skalierungsfaktor</strong> auf den Wert von 1.000 gesetzt werden.<br>
+        <br>
+        F&uuml;r die <em>Simulatoren A und B</em> entspricht die Basis-Netzwerkkapazit&auml;t &quot;Niedrig&quot;, &quot;Mittel&quot; und &quot;Hoch&quot; in etwa den Schwierigkeitsstufen &quot;Einfach&quot;, &quot;Mittel&quot; und &quot;Schwer&quot;. Jedoch werden die Verkehrsstockungen bei einem bestimmten Kapazit&auml;tslevel mit den aktuellen Simulatoren deutlich geringer sein als bei den alten Versionen von Simulator A und B. Daher m&ouml;chtest Du vielleicht die Kapazit&auml;ten etwas verringern, oder etwas feiner einstellen. Dies kann mit dem &Auml;ndern des  <strong>Netzwerk-Kapazit&auml;ts-Vervielfachers</strong> erreicht werden.  Welche Einstellungen hier sinnvoll sind, h&auml;ngt sehr vom Aufbau Deiner St&auml;dte ab, und wie viele &ouml;ffentliche Verkehrsmittel vorhanden sind. Insbesonderen bei einem gut ausgebauten Schienennetz werden geringere Kapazit&auml;ten ben&ouml;tigt als zuvor. Gibt es hingegen fast oder gar keinen Schienenverkehr, sollten die von den  Simulatoren A und B verwendeten Kapazit&auml;ten ein &auml;hnliches Verkehrsaufkommen produzieren.<br>
+  <br>
+        F&uuml;r die Option <strong>&Ouml;ffentliche Verkehrsmittel</strong> sollte ein Wert von &quot;Mittelhoch&quot; oder &quot;Hoch&quot; eine gute Einstellung sein, um die Werte von  Simulator A oder B zu emulieren. Bei St&auml;dten mit viel Schienenverkehr d&uuml;rfte die Einstellung &quot;Mittel&quot; eine gute Wahl sein. In beiden F&auml;llen sollte der Wert von  <strong>Zwischenhalt-Effekt-Vervielfacher</strong> auf 0.2 eingestellt sein.<br>
+  <br>
+        F&uuml;r die <em>Simulatoren C, D und E</em> entsprechen die Kapazit&auml;tseinstellungen &quot;Klassisch&quot;, &quot;Niedrig&quot; und &quot;Hoch&quot; in etwa den Werten &quot;Standard&quot;, &quot;2x&quot; und &quot;5x&quot; der alten Simulatoren.  F&uuml;r den Simulator E sollten die Kapazit&auml;ten gleich bleiben, oder bei der Wahl der Einstellung &quot;Hoch&quot; evtl. leicht gesenkt werden, indem der <strong>Netzwerk-Kapazit&auml;ts-Vervielfacher</strong> etwas verkleinert wird.  F&uuml;r den Simulator D sind geringere Kapazit&auml;ten zur Erreichung eines &auml;hnlichen Verkehrsaufkommens erforderlich, und Simulator C ben&ouml;tigt noch geringere Kapazit&auml;ten f&uuml;r den gleichen Effekt wie zuvor. Die exakten Werte h&auml;ngen nat&uuml;rlich auch hier vom Aufbau der Stadt ab.<br>
+  <br>
+    F&uuml;r die Option <strong>&Ouml;ffentliche Verkehrsmittel</strong> d&uuml;rfte ein Wert von &quot;Mittel&quot; oder &quot;Mittelhoch&quot; den Simulator C relativ gut nachbilden, f&uuml;r den Simulator D ist die Einstellung &quot;Mittelhoch&quot; oder &quot;Hoch&quot; empfehlenswert, und Simulator E entspricht am ehesten den Werten &quot;Hoch&quot; oder &quot;Sehr hoch&quot;. In allen F&auml;llen sollte der Wert von <strong>Zwischenhalt-Effekt-Vervielfacher </strong>auf 0,4 gestellt werden.
+	<br><br>
+	F&uuml;r alle Versionen der <em>Simulatoren C, D und E</em> sollte der Wert
+	von <b>Pendel-Tour Maximalzeit</b> auf 6 gesetzt werden. F&uuml;r Simulator A
+	sollte der Wert auf 17 gesetzt werden und f&uuml;r Simulator B auf den Wert 24.
+	</p></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;Konfiguration</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><p class="text_normal">Das Programm hat eine Reihe von Konfigurationsoptionen, die im Men&uuml; &quot;Extras&quot; aufgerufen werden k&ouml;nnen. Der Einstellungen-Dialog erlaubt die folgenden Konfigurationsm&ouml;glichkeiten:</p>
+<p class="text_zwischentitel">Sprache</p>
+      <p class="text_normal">Hier kannst Du eine Sprache f&uuml;r die Benutzeroberfl&auml;che und das Benutzerhandbuch einstellen. Im Moment wird Englisch und Deutsch unterst&uuml;tzt.</p>
+      <p class="text_zwischentitel">Auto-Backup</p>
+      <p class="text_normal">Diese Einstellung spezifiziert die Anzahl der Backup-Versionen Deines Verkehrssimulators und der Statistik-Ansichts-Dateien, die TSCT beibeh&auml;lt. Ein Wert von Null bedeutet, dass keine Backups angelegt werden. Weitere Informationen hierzu finden sich im Abschnitt  <strong>Backups</strong> weiter oben.</p>
+      <p class="text_zwischentitel">GUI  (Skin)</p>
+      <p class="text_normal">Diese Einstellung beeinflusst die Darstellung der Benutzeroberfl&auml;che des Programms.</p>
+      <p class="text_zwischentitel">Debug Modus (Log in Datei)</p>
+      <p class="text_normal">Wenn aktiviert, wird eine Debug-Logdatei in den Unterordner <strong>temp</strong> des TSCT-Installationsordners angelegt.</p>
+      <p class="text_zwischentitel">Willkommensdialog</p>
+<p class="text_normal">Wenn aktiviert, ruft diese Option beim n&auml;chsten Programmstart den Willkommensdialog auf. Er wird jeweils nur einmal dargestellt, wenn die Option sp&auml;ter nicht wieder aktiviert wird.</p>
+      <p class="text_zwischentitel">Verkehrssimulator-Ordner</p>
+      <p class="text_normal">Dies ist ein Informationsfeld, welches den aktuell von TSCT benutzten Ordner anzeigt, in dem das Programm die Verkehrssimulatoren und Statistik-Ansichts-Plugins l&auml;dt und wieder speichert.</p></td>
+  </tr>
+</table>
+</body>
+</html>
