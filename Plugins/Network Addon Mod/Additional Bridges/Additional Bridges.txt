@@ -1,0 +1,1 @@
+Install additional bridges to this folder. If the bridge you have downloaded dates after the current NAM release (12 September 2011), check the documentation for the bridge, as you may need to update the NAM Essentials Bridge Controller.
