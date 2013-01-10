@@ -1,0 +1,28 @@
+YOU MUST PLACE THE FOLLOWING FILE
+"bsc_Essentials_OG.dat"
+IN YOUR MAIN PLUGINS FOLDER, WITHOUT SUBDIRECTORIES.
+My Documents\SimCity 4\Plugins\bsc_Essentials_OG.dat
+
+It is absolutely critical that you do this.
+
+It needs to be placed in one location so that future
+installers or updates issued by the BSC, SimGoober,
+Vlakhaas, Pegasus, etc. can be applied to the file
+without duplicating it in your plugins folder, which
+can tremendously slow down gameplay.
+
+_______________________________________________________
+
+
+Also, you are advised to keep only one copy of the file
+"NDEX Global Essentials.dat" in your plugins folder at
+a time.  Overwriting it each time you download a new
+NDEX lot is advised to make sure it stays up-to-date.
+
+_______________________________________________________
+
+If you are re-downloading an updated version of a lot,
+you must delete all old versions of the associated lot
+(particularly the old query file) before installing the
+newer version.  Not doing so results in wasted RAM and
+the potential for crashing.

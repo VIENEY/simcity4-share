@@ -1,0 +1,402 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<base target="_blank">
+<title>Readme for NDEX's Rax Condos</title>
+
+<style>
+<!--body
+{background-position-x:50%;background-position-y:0%;background-attachment:fixed;}
+/* Font Definitions */
+@font-face{font-family:Tahoma;panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face {font-family:Verdana;panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+a:link, span.Hyperlink {color:#000099;text-decoration:none;}
+a:visited, span.HyperlinkFollowed {color:#000099;text-decoration:none;}
+a:hover {color:#FFFFFF;background-color:#000000;}
+p {margin-right:0.2in;margin-left:0.2in;margin-top:0.0pt;margin-bottom:12.0pt;
+  font-size:10.0pt;font-family:"Verdana";text-align:center;}
+p.1 {margin-right:0.2in;margin-left:0.2in;margin-top:0.0pt;margin-bottom:0.0pt;
+    font-size:10.0pt;font-family:"Verdana";text-align:justify;}
+p.2 {margin-right:0.8in;margin-left:0.8in;margin-top:0.0pt;margin-bottom:0.0pt;
+    font-size:14.0pt;font-family:"Verdana";text-align:center;}
+span {font-size:10.0pt;color:black;font-family:Verdana;}
+-->
+</style>
+
+<script language="javascript">
+//-----------------------------------------------------------------------------
+// Purpose: Provides the neccesary functions to implement information flys, or
+// clickable blurbs of text that expand to provide more information about an
+// acronym, pharase, or anything that needs an extended explanation.
+// Author: "DarkMatter"
+// Date: 8/29/2004
+//-----------------------------------------------------------------------------
+function fly_onclick(vID)
+{
+     var vSpan = document.getElementById("fly_" + vID);
+     if (vSpan != null)
+     {
+          var sDisp = vSpan.style.display;
+          if (sDisp != 'none')
+               vSpan.style.display = 'none';
+          else
+               vSpan.style.display = 'inline';
+     }
+}
+</script>
+</head>
+
+
+<body bgcolor=white lang=EN-US>
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=500 style='width:540pt'>
+ <tr style='height:450pt'><td width=500 style='width:540pt;padding:3.25pt 0in 3.25pt 0in;height:400pt'>
+
+<p class=MsoNormal align=center style='text-align:center;background:#002244'><b><br>
+  <span style='font-size:16.0pt;color:white'>NDEX Rax Condos<br></span></b>
+  <b><span style='font-size:10.0pt;font-family:Tahoma;color:white'>updated February 6th, 2005</b><br>
+  &nbsp;</span></p>
+
+<p style='margin-top:14.0pt;margin-bottom:14.0pt;text-align:center'><i>An NDEX and Associates Release:
+  <br>B.A.T. Model by kd5rax.
+  <br>Modding by Equinox.</i>
+
+<p style='margin-top:14.0pt;margin-bottom:24.0pt;text-align:center'>If you have any questions, concerns, or
+  feature requests for this release <b>AFTER</b> reading this readme in its entirety, you can drop me an IM at:
+  DigitalCynic96 (AIM) or spartan117nls@hotmail.com (MSN).
+
+<div align=center>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 style='background:white'>
+ <tr>
+  <td width=480 style='width:5.0in;border:solid gray 1.0pt;padding:-2in 0in -2in 0in'>
+  <p style='margin-top:10.0pt;margin-right:.3in;margin-bottom:10.0pt;margin-left:.3in;text-align:center'>
+  <span style='font-size:9.0pt;font-family:Verdana'>A condominium complex that is designed with the style
+  of SimCity 2000's arcologies in mind.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Lot Details</b><br>&nbsp;</span></p>
+
+<p class=1 style='margin-top:24pt'><b><span style='font-size:12.0pt;font-family:Verdana'>Growable R§§ Version</span></b></p>
+
+<p class=1 style='margin-top:6pt'><span>Lot Size: 6x6 tiles
+  <br>R§§ Residents: 8,800 (17,500§ when dilapidated)
+  <br>Building Worth: §2,400 (§200/month at 7.0% tax)
+  <br>Building Value: §400,000
+  <br>Bulldoze Cost: §3,200
+  <br>Tileset(s): Houston, Euro
+  <br>Growth Stage: 7
+  <br>Zoning: High-Density Residential
+  <br>Reward Contribution: 1 NDEX building, 6x6 residential highrise.
+  <br>Construction Time: 100 days
+  <br>Flammability: 110 at stage 5
+  <br>Power Used: 250 MWh/month
+  <br>Water Consumed: 2,000 gallons/month
+  <br>Air Pollution Generated: 60 over 6 tiles
+  <br>Water Pollution Generated: 50 over 7 tiles
+  <br>Garbage Per Month: 200 tons
+  <br>SC4Lot File: "NDEX - Rax Condos - Growable R2 (6x6)_0e4cbac9.SC4Lot"
+  <br>Custom Query? Yes - standard NDEX query
+  <br>Transit Enabled? Yes</span></p>
+
+<p style='margin-top:8pt;margin-bottom:8pt'><span>&nbsp;</span></p>
+
+<p><b><span class="fly" title="What about SC4Desc files?" onclick="fly_onclick('TGI3');">What about the SC4Desc file(s)?</span>
+  </b><span id="fly_TGI3" class="flyInfo" style="DISPLAY: none" onclick="fly_onclick('TGI3');"><i><br><br>
+  They are included in their correlated DAT (for props) or SC4Lot (for buildings) file.<br>For plopables, this is done automatically
+  by the lot editor.<br>For growables, I merge them together manually.</span></i>
+
+<p style='text-align:center;margin-top:12pt'><span style='font-size:9.0pt'>
+  <span class="fly" title="Editing this download's lot files ..." onclick="fly_onclick('TGI2');">
+  <b>For information regarding editing and altering this download's lot, click here.</b></span>
+  <span id="fly_TGI2" class="flyInfo" style="DISPLAY: none" onclick="fly_onclick('TGI2');"><br><br>You can make
+  modifications to the lot files by moving them into your main My Documents Plugins directory and simply using
+  the Lot Editor as normal.  When you are done editing, just press "Save" and the original file will be overwritten.
+  For ploppables, the only custom item that is messed up when you do this is the menu icon, which is not a big deal
+  (the LE just generates a new one).  For growables, there are no adverse side effects.</span></p></span>
+
+
+
+<!-- -------------------- -->
+<!-- --- DEPENDANCIES --- -->
+<!-- -------------------- -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Dependancies Listing</b>
+  <font size=2><br>(from the STEX and included in this download)<br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:24pt;margin-bottom:6pt'><b><font size=4>
+  Dependancies included in this archive ...</b></font>
+
+<p style='text-align:center;margin-top:12pt;margin-bottom:18pt'>
+  In order for this lot to properly function, you must place the file "bsc_Essentials_OG.dat" in your main
+  My Documents\SimCity 4\Plugins folder, with NO SUBDIRECTORIES.</p>
+
+<p class=1 style='text-align:center'><b>SC4Lot file(s):</b> 'NDEX - Rax Condos - Growable R2 (6x6)_0e4cbac9.SC4Lot'
+<br><b>Query file:</b> "NDEX Global Essentials.dat" (you only need one copy of this file in your plugins folder  at once - if
+  you download mutltiple NDEX lots, simply keep only one copy).  Make sure you have read the aforementioned instructions dealing
+  with how to place "bsc_Essentials_OG.dat"!  Not installing the file will result in crashing upon querying.
+<br><b>Custom building model:</b> "kd5rax's Rax Condos [Model].dat"
+<br><b>Custom props:</b> "kd5rax's Flora Props Set.dat", "N747's Clusterpipes (Small) Prop.dat"</p>
+
+<p style='margin-top:12.0pt;margin-bottom:0pt'><hr width=680px></p>
+
+<p style='margin-top:12.0pt;margin-bottom:12.0pt;margin-left:1.0in;margin-right:1.0in'><i>The rest of the files
+  (screenshots and this readme) are not nessecary; in fact, it has been discovered that having too many files
+  in your plugins folder that are not used by SimCity causes slowdown during gameplay and loading.  Remember,
+  the neater you keep your plugins folder, the easier it is to find and edit or delete specific buildings and
+  lots!</i></p>
+
+<p style='margin-top:0pt;margin-bottom:12.0pt'><hr width=680px></p>
+
+<p style='text-align:center;margin-top:24.0pt;margin-bottom:6.0pt'><b><font size=4>
+  Dependancies from the Simtropolis Exchange</b></font>
+
+<p style='text-align:center;margin-top:12.0pt;margin-bottom:12.0pt'>
+  In addition to the files listed above, you need to have the following files present in your plugins folder.</p>
+
+<p class=1 style='text-align:center'><b>Textures:</b> <a href="http://www.simtropolis.com/stex/details.cfm?id=3271">
+CARCH Texture Set V5</a>
+<br><b>Custom Props:</b> none!</p>
+
+<p style='margin-top:12pt;margin-bottom:12pt'>Dependancy files are kept separate and not included to give their
+  designers and creators credit.  I am sorry for any inconvenience this may cause you, but I have tried to
+  provide direct links to the details window where you can download them.</p>
+
+
+
+<!-- ------------------ -->
+<!-- --- INSTALLING --- -->
+<!-- ------------------ -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Installation</b><br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:18.0pt;margin-bottom:8.0pt'><span style='font-size:11.0pt'>
+  <i>In order to install this download, all you need to do is unzip all of the files contained to any subdirectory of
+  the folder My Documents\SimCity 4\Plugins.  It does not matter which subdirectory you choose, although I recommend
+  putting it under a "NDEX" folder so you can easily access it if you want to delete, edit, or alter it in the
+  future.</i></span></p>
+
+<p style='margin-top:0pt;margin-bottom:0pt'><hr width=680px></p>
+
+<p style='text-align:center;margin-top:8.0pt'><span style='font-size:10.0pt'>
+  Some members of the Simtropolis community who release many items on the Exchange have decided to switch to using
+  executables (Windows app or program, .exe files) to distribute their creations.  NDEX has decided to stick to zip
+  files containing the files you need, no fancy installers.  However, you should be wary of where you put the files
+  included, and be sure to read the instructions stated above.  This will ensure if any bugs are discovered, your
+  files are updated in conjunction with any updates the BSC chooses to apply to their files (one of which is the
+  "bsc_Essentials_OG.dat" file).</span></p>
+
+
+
+
+<!-- ------------------- -->
+<!-- --- SCREENSHOTS --- -->
+<!-- ------------------- -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Ingame Screenshots</b>
+  <br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:24.0pt;margin-bottom:6.0pt'>
+<img src="Rax Condos - Day.jpg"> <br><br>
+<img src="Rax Condos - Night.jpg">
+
+
+
+
+<!-- ------------------ -->
+<!-- --- STATISTICS --- -->
+<!-- ------------------ -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Statistics in the [Commercial] Query</b>
+  <font size=1><br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:16.0pt'><span style='font-size:10.0pt;text-align:center'>
+In the query for this lot, there are a few statistics provided that pertain to the commercial office ('CO') status
+of the city you are currently playing.  There are two items, found approximately in the query window's center:
+"Zoned Tiles" and "CO Cap Status".</p>
+
+<p style='text-align:center;margin-top:10.0pt'>The "Zoned Tiles" line tells you simply how many SC4 tiles in the current
+city are occupied or simply zoned for commercial development.  The first value is the total number of low-density tiles,
+the second is for medium-density, and the third is for high-density.</p>
+
+<p style='text-align:center;margin-top:10.0pt'>The "CO Cap Status" line tells you about your current commercial
+office cap and how close you're coming to the limit.  Caps are rather detailed, and for the full idea of how they work,
+you can either search around the <a href="http://www.simtropolis.com/idealbb/">Simtropolis Forums</a> or check out
+this short guide, from the Prima SimCity 4 strategy guide ...</p>
+
+<p style='margin-top:0.35in;margin-bottom:0in;margin-left:1.0in;margin-right:1.0in;text-align:center'>
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 style='background:grey;border-collapse:collapse'>
+ <tr>
+  <td style='border:solid gray 1.5pt;padding:.15in .1in .15in .1in'>
+  <p class=MsoNormal align=center style='text-align:center;margin-bottom:0.0pt'><span style='font-size:9.0pt'>
+  <span class="fly" title="Demand Caps, from SC4 Prima Strategy Guide" onclick="fly_onclick('TGI1');">Click to see demand cap details ...<br><i>(will
+  not work properly unless active content is enabled)</i></span>
+  <span id="fly_TGI1" class="flyInfo" style="DISPLAY: none" onclick="fly_onclick('TGI1');"><br><br>Demand caps are items that essentially oppose the
+  growth of your city and - if not properly addressed - can dry up all your city's demand.  Caps are fixed ceilings beyond which a population cannot
+  grow, regardless of demand for that developer type.  With any increase in population, you get closer to the cap, and the amount of demand allowed
+  decreases until you reach the cap, at which point the demand becomes zero regardless of what is occurring in your city.  Most developer types are
+  restricted by demand caps.  The developer types NOT affected by this are CS§, CS§§, and CS§§§.  Note that demand caps are city-specific.<br><br>
+  The percentages displayed in the query simply tell you what percent of your current cap is filled.  Higher percentages mean lower demand.<br><br>
+  Caps can be relieved by plopping certain civic structures.  The easier way to relieve these caps, though, is to create neighbor connections, and
+  lots of them.  The amount of relief a connection provides decreases with each one you make, but are network-specific.  Commercial and industrial
+  desire connections to neighboring cities, and residential desires amenities (parks, etc.).  For full listing of cap relief structures and how
+  much each plop provides, check out a strategy guide to the game.<br><br>If these statistics are useful to you, you might consider checking out
+  a mod on the Simtropolis Exchange which replaces the default residential, commercial, and industrial queries with ones that also provide demand,
+  cap status, and zoned tiles information.  You can download or view information on it by checking the following link to the STEX: 
+  <a href="http://www.simtropolis.com/stex/index.cfm?mode=files&filetype=Lot&Str=RCI%20Query%20Upgrade%20Mod">"RCI Query Upgrade Mod"</a>.</span>
+  </td>
+ </tr>
+</table>
+</p>
+
+<p style='text-align:center;margin-top:0.35in;margin-left:.6in;margin-right:.6in'>Finally, the line that reads "Total number of buildings" simply
+indicates how many individual buildings overall are constructed in your current city.  This includes growable lots, plopped lots, civic/utility
+lots, etc. etc.</p>
+
+<p style='margin-top:10pt;text-align:center'>For residential queries, the statistics are along the same lines and mean pretty much the same thing.</p>
+
+
+
+
+<!-- ------------------------- -->
+<!-- --- BAT NIGHTLIGHTING --- -->
+<!-- ------------------------- -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Note about Custom Model Nightlighting Effects</b>
+  <font size=1><br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:16.0pt'>In order to see night lighting, you need to have the EP1 Update
+  1 for Rush Hour/Deluxe installed, and then afterwards install the patch specifically for the BAT nightlighting,
+  available on the <a href="http://simcity.ea.com/coolstuff/bat/index.php">&quot;Building Architect Tool&quot;
+  page</a> on the official Maxis website.&nbsp; It is a separate download because it is optional and would add 19 MB
+  to the other update.  In addition, you must be logged in to see the download link.</span></p>
+
+<p style='text-align:center;margin-top:18.0pt'><b><i><span style='font-size:11.0pt'>If you do not have this installed,
+  no custom model you<br> download will display any lighting effects at night.</span></i></b></p>
+
+
+
+
+<!-- -------------------- -->
+<!-- --- KNOWN ISSUES --- -->
+<!-- -------------------- -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Known Issues with this Download</b>
+  <font size=2><br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:18.0pt;margin-bottom:6.0pt'><font size=3 face=Arial>
+At times, lots can suffer from a 'bug' where they become un-demolishable.  The building disappears
+but the base textures and props remain.  If this happens, there is an easy way to fix it.  Demolish the
+lot (nothing will appear to happen), then lay streets parallel to each other so the entire area the lot
+occupied is covered by street tiles.  The props should still be there, but demolish the streets all at
+once, and the props and the lot should go away.</font></p>
+
+
+
+<!-- -------------------- -->
+<!-- --- TRANSLATIONS --- -->
+<!-- -------------------- -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>NDEX Translations</b>
+  <font size=1><br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:24.0pt'>
+  NDEX lots can be found on several SimCity 4 fansites/communities around the web.  We hope that by allowing others to translate our lots and creations,
+  we can create a better gameplay experience for more players around the world.  So far, the NDEX series of lots' permissions have been given to
+  <a href="http://www.simcitybrasil.br.com">SimCityBrasil</a>, and <a href="http://www.simszone.de">SimsZone.de</a>.  If you are a webmaster or somebody
+  interested in bringing these lots to your own community and language, please contact me by email (equinox.nls@gmail.com) or via a private message at
+  Simtropolis.</p>
+
+
+<!-- -------------------- -->
+<!-- --- TEAM MEMBERS --- -->
+<!-- -------------------- -->
+
+<p style='text-align:center;margin-top:18pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12pt;color:#FFFFFF'>The NDEX Team is ...</b>
+  <br><a href="http://www.simtropolis.com/idealbb/showform.asp?forumid=">
+  <font size=2 color=white>(Check out the NDEX Forum!)</a><font size=1><br>&nbsp;</span></p>
+
+<p style='text-align:center;margin-top:20pt'><span>
+  Ardecila - 'NDEX Automata Samurai'
+  <br>Decius – 'NDEX Industrial Expert'
+  <br>Dev - 'NDEX Field Agent'
+  <br>DuskTrooper - 'NDEX Skyscraper Machine'
+  <br>Eburress – 'Contract NDEX Modeler'
+  <br>Equinox - 'NDEX Technical Amalgamator'
+  <br>Fosterk – 'NDEX Naval Admiral'
+  <br>Frogface - 'NDEX Amphibious Modelmaker'
+  <br>J.O. - 'NDEX Futuristic Designer'
+  <br>kd5rax – 'NDEX BAT Modeler'
+  <br>Monteferro - 'Hong Kong BATter'
+  <br>N74704 – 'NDEX Madd BATter'
+  <br>NintendoMaster128 - 'NDEX Casino Collaborator'
+  <br>Oneil_1 - Miami, New York, and Hong Kong-style stuff
+  <br>Superstar - 'SGX/NDEX Modeler'
+  </span></p>
+
+
+<!-- ---------------------- -->
+<!-- --- SPECIAL THANKS --- -->
+<!-- ---------------------- -->
+
+<p style='text-align:center;margin-top:24.0pt'>&nbsp;</p>
+
+<p style='text-align:center;background:#555566'><b><font size=1><br>
+  <span style='font-size:12.0pt;color:#FFFFFF'>Special Thanks ...</b>
+  <font size=1><br>&nbsp;</font></p>
+
+<p style='text-align:center;margin-top:16.0pt'><font face=Arial><span style='font-size:12.0pt'>
+  ... to DarkMatter for the little HTML/Java click-expand script,
+  <br>... to Daeley for the help learning to make custom queries,
+  <br>... to GrampaAl for help learning the basics and conditional rewards,
+  <br>... to Vlakhaas and Daeley for figuring out conditional rewards (and other stuff),
+  <br>... and to the whole NDEX team for having such wonderful patience with me. ;)
+  </font></span></p></td>
+ </tr>
+</table>
+
+
+<p>&nbsp;</p>
+
+
+<p style='text-align:center'><font size=2 face="Lucida Console" color=black>
+YOU USE THESE LOTS AT YOUR OWN RISK.  I WILL NOT BE HELD RESPONSIBLE FOR ANY ADVERSE EFFECTS YOU
+ENCOUNTER BY USING THEM.  However, please do report any bugs or concerns you have to me ... you
+can send a PM to "Equinox", or add me to your instant messenger: (AIM) DigitalCynic9622; (MSN)
+spartan117nls@hotmail.com.</font></p>
+
+</table>
+</div>
+</body>
+</html>

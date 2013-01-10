@@ -1,0 +1,7 @@
+Yeah, it's a library. I made this originally for SYM prod. chained university project but it never progressed much further.
+
+Lot is size 4x4, plop cost is $3500 and monthly cost is max. $1000. Gives jobs for 100 librarians I think. No dependencies.
+
+UPDATE: Version 1.01, updated the EQ boost stat, it's now closer to other library BATs on STEX.
+
+To install, unzip the file into your plugins directory.
