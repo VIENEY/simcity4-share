@@ -1,0 +1,1 @@
+start /min cmd /C "java -jar TSCT.jar || %windir%\SysWOW64\java -jar TSCT.jar"

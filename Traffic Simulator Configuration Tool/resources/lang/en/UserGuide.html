@@ -1,0 +1,2843 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <title>Traffic Simulator Configuration Tool - User's Guide</title>
+  <style type="text/css">
+<!--
+.text_titel {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-weight: bold;
+color: #FFFFFF;
+}
+.text_zwischentitel {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: bold;
+}
+.text_normal {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+text-align: justify;
+}
+body {
+background-image: url();
+background-color: #B2BAD9;
+}
+a:visited {
+color: #000000;
+text-decoration: underline
+}
+a:hover {
+color: #CC0000;
+text-decoration: underline
+}
+a:link {
+color: #000000;
+text-decoration: underline
+}
+.rot {
+color: #FF0000;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: bold;
+}
+.blau {
+color: #0000FF;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: bold;
+}
+.gruen {
+color: #00FF00;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 12px;
+font-weight: bold;
+}
+-->
+  </style>
+</head>
+
+
+<body>
+
+
+
+
+
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="4" cellspacing="0" width="750">
+
+
+
+
+
+
+  <tbody>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Traffic Simulator Configuration
+Tool - User's Guide</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td class="text_normal">The Traffic Simulator
+Configuration Tool (TSCT) is a powerful tool for adjusting the
+configuration of the NAM Unified Traffic Simulator (known as the NAM
+Simulator for short) and its associated data views to your liking. Only
+those aspects of the simulator that are completely safe for the player
+to modify are included in the TSCT; if you follow the instructions
+here, you don't have to worry about unexpected side effects, no matter
+what settings you use. Nevertheless, changing the settings available in
+the TSCT can have a big effect on your game, ranging from changing your
+city's income or expenses to changing the congestion levels of traffic,
+which in turn can have many secondary effects. &nbsp;For a more
+complete understanding of many of these fields, and of the traffic
+simulator in general, please see <span id="msg_310570"><a href="http://sc4devotion.com/forums/index.php?topic=10261.0" target="_blank">A Guide to the Operation of the Traffic
+Simulator</a></span>.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+Since the NAM Simulator is essentially a generalized form of Simulator
+Z, the TSCT can be used to modify the configuration of Simulator Z, if
+that is what you are currently running. The result of such a
+modification is a version of the NAM Simulator that is completely
+compatible with Simulator Z.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+The TSCT can be used to update your current copy of the NAM Simulator
+to the latest version, change your settings in the NAM Simulator and
+its associated data views, or switch your traffic simulator to the NAM
+Simulator from one of the earlier traffic simulators. Although the NAM
+Simulator is generally used with the rest of the NAM, it does not
+require the NAM, so the TSCT can also be used to install the NAM
+Simulator and optionally its data views in a game that is not running
+the NAM.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+This User's Guide will describe the procedure of selecting a traffic
+simulator to modify, how all the fields in the TSCT work on the
+selected simulator, what effects these various fields have, and the
+various ways of saving your changes. It will start with the <strong>Base
+Network Capacity</strong> and the <strong>Network Capacity
+Multiplier</strong>, which are generally the most heavily used
+fields in the TSCT. After that, it will describe the fields in the
+order in which they appear in the main TSCT window.</td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Starting the Program</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <p class="text_normal" align="justify">When
+you first start the TSCT, it tries to find your NAM folder. If it
+succeeds, it looks for an existing copy of the NAM Simulator; if it it
+finds one, it loads it the and displays its settings in the main
+window. If it doesn't find an existing copy of the NAM Simulator in
+your NAM folder, it displays a message to this effect and loads
+settings for a standard version of the NAM Simulator.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+If the TSCT can't find your NAM folder when it starts up, it displays a
+message saying so, and gives you a choice to either look for your NAM
+folder via a file dialog box , or simply to start out with a standard
+version of the NAM Simulator, which you can modify and then save
+wherever you want. The relevant data views will automatically be saved
+in the same folder as the simulator.</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Program Operation</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <p class="text_normal">Please note that although any
+changes made to your traffic simulator take effect immediately, the
+time it takes for these changes to show up in your traffic patterns
+will vary greatly, depending on the change. &nbsp;<strong>Some
+changes will show up immediately in your traffic patterns, some changes
+will show up the next time the traffic simulator runs (about once every
+four months), and some changes may take up to eight years to fully
+manifest.</strong> For longer-term changes, you can tell when the
+change is complete by looking at the Traffic Volume Graph.
+&nbsp;When it shows basically stable traffic patterns for at
+least&nbsp;two years, then you can be confident that the change has
+completely manifested in your city.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+For the <strong>Costs and Scaling Factors</strong>
+section,
+the original value for each field is given to make it easy to restore
+these to their original values if you want. As mentioned above, first
+the <strong>Base Network Capacity</strong> and the <strong>Network
+Capacity Multiplier</strong> will be described, followed by the
+other fields starting from the top of the main window.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="blau">Base Network Capacity</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">If you want to change to one
+of the other standard capacity versions of the NAM Simulator, use the
+drop-down box labeled &ldquo;Base Network Capacity&rdquo; to
+choose the capacity you want. (This box is located near the left, about
+two-thirds of the way down the window in <span class="blau">blue
+letters</span>.) Capacities range from "Classic" (the lowest) to
+"Ultra" (the highest). Generally, you would use "Classic" for rural
+areas and towns, while "Ultra" is generally recommended only for cities
+of many millions of Sims.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+The other levels ("Low", "Medium", and "High") provide intermediate
+capacities; which one of these you choose depends on the size of your
+city, how much mass transit you have, and how much congestion
+you&rsquo;re prepared to deal with. Cities with a lot of mass
+transit need less network capacity than cities with little mass
+transit. Once you make your selection, the network capacities used for
+that level are displayed in the row of boxes directly above the
+drop-down box.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+You can change you simulator&rsquo;s capacity at any point in your
+city&rsquo;s development without penalty. The game must not be
+running at the time, however. (This last point applies to all simulator
+and data view changes.) If you just want to build big cities and want a
+capacity that will handle that comfortably without ever having to
+change it, using the default "High" capacity should work fine.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="blau">Network Capacity Multiplier</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">If you want to use a capacity
+level that is in between the five main levels, or outside the range of
+these levels, you can use the<strong> Network Capacity Multiplier</strong>.
+This field multiplies the base capacity by the number in the spin box,
+which may range from 0.1 to 2.0. If you change the number in the spin
+box, you will immediately see the network capacity numbers in the row
+of boxes above this field change accordingly. For proper operation of
+the traffic simulator, the proportion of the various network capacities
+at a given base network capacity is fixed. However, this proportion
+varies slightly among the various base capacities, with rails having
+proportionately higher capacities as the base network capacity
+increases. You can use this information along with the <strong>Network
+Capacity Multiplier</strong> to create capacity spreads to your
+liking.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+For most capacity levels, the background color in the row of boxes
+labeled "Capacities" will be green. However, at higher capacity levels,
+some boxes will turn yellow, and at even higher capacities, some boxes
+will turn red. There is nothing wrong with using these higher
+capacities, but the different colors are used to signify a warning
+about the display of the Traffic Volume Data View. Although the amount
+of traffic that can flow through a network is effectively unlimited,
+the Traffic Volume Data View (which shows the traffic for a single
+commute period) cannot display values higher than 64K - 1 (65,535).
+Normally, the Traffic Volume Data View will display up to 300% of the
+network capacity for a given commute period (which is half of the
+standard network capacity), at which point it displays solid red.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+However, if this 300% number is greater than 64K, the full range of
+volumes cannot be displayed, and the color range of the Traffic Volume
+Data View is adjusted so that its maximum is just under 64K. (This
+limitation affects the Route Query Tool as well when it is positioned
+over a network.) For these situations, the background color of the
+capacity box in the TSCT program will be shown as yellow. If the
+capacities are set so high that even 200% of the network capacity for a
+commute period (in other words, the full network capacity for a single
+day) is greater than 64K, then the background color of the capacity box
+in the TSCT program will be shown as red. Again, the operation of the
+game is not affected, as SC4 keeps track of volumes greater than 64K,
+and even uses them to correctly display the Traffic Congestion Data
+View; this is simply a limitation on the display in the Traffic Volume
+Data View and the Route Query Tool.</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Mass Transit</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Mass Transit Usage</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This drop-down box controls
+the preference of Sims for mass transit over cars. There are six
+selections here, including five fixed options that range from Low to
+Very High. The "Medium" selection corresponds to what is typically
+found in large American cities with fairly comprehensive mass transit
+systems, while the "High" selection corresponds to many large European
+cities with even more comprehensive mass transit systems. The actual
+preference of each type of Sim (R$, R$$, and R$$$) for mass transit in
+each of these five levels is reflected in the grayed-out array of nine
+boxes to the right of the drop-down box, which changes whenever the
+selection in the drop-down box is changed.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+The first column in this array represents the percentage of Sims who
+prefer to use mass transit, the second column represents the percentage
+of Sims who prefer to use cars, and the third column represents the
+percentage of Sims who prefer to use whichever travel method is
+fastest. Note that these are only preferences, and do not specify which
+travel method the Sims will actually use. If the travel times for the
+two methods are close, then the Sims will use the preferred method. But
+if one travel method is significantly faster than the other, then the
+Sims will use that one.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+It is also possible to modify the travel method percentages directly by
+choosing the "Custom" entry in the drop-down box. If this is done, then
+the array is no longer grayed out, and it is possible to change the
+individual entries in the spin boxes. Since the entries represent
+percentages, each row must add up to 100.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Highway Bus Lanes</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This field increases the
+speed of buses on highways slightly, with the corresponding result that
+the number of Sims taking buses that travel on highways will also
+increase. This is similar to what happens with real-world highway bus
+lanes. The automata aren't changed, however, in that cars will still be
+present in all lanes, although the number of buses should be somewhat
+greater. From a visual point of view, you can consider that the bus
+lanes also allow high occupancy traffic of other types as well.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Park &amp; Ride</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This field changes the way
+the game works so that cars cannot take the Sims directly to their
+workplace. Instead, they are useful only for taking them to parking
+facilities where they can either walk the rest of the way to work, or
+(most usefully) parking facilities where they can take mass transit to
+work. In the second case, you need to build such parking facilities
+near mass transit stations; putting them at the edge of residential
+zones can be especially useful. If this option is checked and
+sufficient parking facilities are not built, the Sims will end up
+driving all the way to work and then discover that they have no place
+to leave their car. As a result, they don't make it to work, they get
+fired, and they leave town, leaving behind an abandoned residence.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+Parking facilities that are included in the models of various buildings
+generally don't count for the purposes of Park &amp; Ride, because
+these parking facilities are generally just eye candy. However, parking
+facilities that are part of mass transit stations (such as the standard
+Maxis train station) almost always are functional, and therefore work
+well in Park &amp; Ride systems.</p>
+
+      
+      <p class="text_normal"><span style="font-weight: bold;">Buses contribute to traffic</span></p>
+
+      
+      <p class="text_normal">In the original Maxis traffic simulator,
+buses did not contribute to traffic congestion; the pathfinder was not
+tuned tightly enough to make this workable even if it had been desired.
+&nbsp;Experiments showed that turning this field on in the original
+simulator would have simply increased the existing traffic congestion
+without having any significant benefit.</p>
+
+      
+      <p class="text_normal">However, in the NAM traffic simulator, the
+pathfinder has been tuned so that it is much more intelligent than in
+the original Maxis traffic simulator, and it is now possible to allow
+buses to contribute to traffic (just like every other vehicle travel
+type) without creating any problems. &nbsp;In fact, the traffic
+simulation as a whole runs much better this way. &nbsp;The reason for
+this is that in the original Maxis traffic simulator, buses became the
+travel type of last resort; if congestion on the roads or most rails
+became too great, the traffic simulator could always cram more Sims
+into buses and thereby reduce congestion arbitrarily, since all the
+road networks had an infinite capacity for buses. This was highly
+unrealistic, and had the Sims at times abandoning faster forms of
+transport for buses simply to avoid congestion.</p>
+
+      
+      <p class="text_normal">The current NAM traffic simulator avoids
+this problem by letting buses contribute to traffic. &nbsp;However,
+buses, like all vehicles in SC4, are really single-passenger vehicles,
+and so some of their usefulness is lost in that they are now no more
+efficient than cars at transporting Sims. &nbsp;However, they are still
+very useful for those Sims who prefer to use mass transit, and even
+more importantly, they are extremely efficient at ferrying Sims to high
+speed rapid transit (i.e., the various rail networks) where no parking
+exists. &nbsp;So although each setting of this property has certain
+drawbacks, the traffic simulator works better and provides a more
+accurate traffic simulation when this field is checked, which is its
+original state..</p>
+
+      
+      <p class="text_normal">However, some people like the way the
+original Maxis traffic simulator worked, or they just like to have
+increased use of buses. &nbsp;For these people, this field can be
+unchecked, and the behavior of the original Maxis traffic simulator
+will be restored with regard to buses. If this is done, though, the
+traffic simulation as a whole becomes slightly degraded as a result.
+&nbsp;The amount of degradation is fairly minimal, though, so as long
+as it is understood that this happens, unchecking this field should not
+cause any major problems.</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Costs and Scaling Factors</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Monthly Fares per Sim
+per Tile</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">These boxes specify how many
+simoleons your city collects each time the named travel type passes
+over a single tile. These are called "fares" because by default, only
+mass transit travel types have these set to nonzero values. By raising
+or lowering these numbers, you can raise or lower the fares for any
+travel type. The Sims don't actually pay the fares; the city just
+collects them. This is a limitation of the simulation. Also, raising or
+lowering the fares has no effect on the Sims' travel habits. Instead,
+it can either be used as a device for generating more revenue for your
+city's treasury, making the game easier, or for subsidizing the Sims'
+mass transit use, which generates less revenue for the city and makes
+the game harder.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+This feature works in an interesting way in that the fares for a given
+travel type are permanently attached to a network tile when it is
+built. This means that if you change all the fares and then start up
+your game, you will find no immediate change in your monthly income.
+However, any new network tiles you build will have the new fares
+attached to them. This property allows fares to be used in an
+interesting way. Suppose you want to build a toll road, but instead of
+clunky toll booths (they're so 20th century), you want sensors in the
+road to automatically detect vehicle travel and collect tolls
+automatically, according to the distance traveled.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+Furthermore, you want different tolls for cars, buses, and trucks.
+Using this field, this is easy to do. You set the bus fare to the
+normal bus fare plus what you want the toll for buses to be, and you
+set the car and truck fares to what you want their tolls to be. Then
+you start the game, build your toll road, save the game, exit, and
+reset the fares for buses, cars and trucks to what they were before.
+Now you have a special toll road in your game that collects the tolls
+you specify whenever anyone drives over it. No slowing down of traffic,
+no traffic jams - just silent toll collection.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+There are many other possibilities here. You can even charge
+pedestrians to walk on your toll roads. And you can create toll
+bridges, toll tunnels, and toll streets, among other things. You can
+even create municipal parking lots or garages where the Sims pay the
+city to park. Just set them one tile back from the road, and connect
+them with a street or road tile that has its fares set to be the
+parking costs you want. You collect both when the Sims enter and when
+they leave.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Monthly Costs per
+Network Tile</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">These boxes specify how much
+the city's treasury is charged each month for a single tile of each
+network type. Unlike <strong>Monthly Fares per Sim per Tile</strong>,
+changes to these costs take effect the next time you start the game.
+Normally, these costs are considered maintenance costs. But they can
+also be considered to incorporate construction costs as well,
+especially since construction costs aren't directly available to the
+traffic simulator. In reality, governments don't pay cash for large
+transportation projects; why should your city? Instead, governments
+will often issue bonds. So you can consider that the monthly costs also
+cover the cost of interest-only bonds that your city has issued to pay
+for the network. Since these bonds are interest-only, payments on them
+continue forever (or at least until the network is demolished). As with
+      <strong>Monthly Fares per Sim per Tile</strong>,
+changes to this field provide a simple way to make the game either
+easier or more difficult.</p>
+
+
+      
+      
+      <p class="text_normal">You may notice that the monthly cost for
+the RHW network tiles is set to zero and that this setting cannot be
+changed. &nbsp;The reason for this is that the RHW is based on an
+unused network that was incompletely implemented by Maxis in SC4.
+&nbsp;One of the things that was not implemented in this network was
+the monthly cost per network tile, and although this value can be set
+internally in the traffic simulator, the game always acts as if it is
+zero.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Customers/Traffic
+Noise Coefficient</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal" align="justify">This
+field controls the effect of road noise both on business customers and
+on residences. &nbsp;Road noise is generated by the pedestrian,
+car, bus, and truck travel types traveling on any of the road networks
+except highways. &nbsp;Road noise is good for businesses; the
+number of customers that a particular business receives is directly
+proportional to the inverse of this coefficient; what this implies is
+that a given percentage increase or decrease in this number will have
+the same effect on noise levels throughout the coefficent's
+range.&nbsp;Specifically, the number of customers that a business
+receives is given by the formula</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel" align="center">Customers
+= coefficient*(traffic volume)</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal" align="justify">where
+"traffic volume" is the maximum volume observed for the morning commute
+in nearby tiles. &nbsp;The threshold&nbsp;for the medium
+customer level is 152, and the&nbsp;level for the high customer
+level is 215; the maximum number of customers is capped at 255.
+&nbsp;(For more specifics, please see <a href="http://sc4devotion.com/forums/index.php?topic=10261.msg310570#msg310570" target="_blank">A Guide to the Operation of the Traffic
+Simulator</a>.)
+&nbsp;The following graph shows the threshold for medium and high
+customer levels plotted against the inverse of the coefficient.
+&nbsp;(The graph is supplied courtesy of Trias.)</p>
+
+
+
+
+      
+      
+      
+      
+      <div style="text-align: center;"><img style="width: 607px; height: 328px;" alt="" src="sc4_traffic.png"><br>
+
+
+
+
+      </div>
+
+
+
+
+      
+      
+      
+      
+      <p class="text_normal" align="justify"><br>
+
+
+
+
+      <br>
+
+
+
+
+
+
+Road noise has the opposite effect on residences. &nbsp;The higher
+the road noise, the less desirable the residence becomes.
+&nbsp;(Customers translate directly into desirability for
+businesses.) &nbsp;However, the desirability effect for residences
+is much less than for businesses, so in general, increasing the number
+in this field will have a positive effect on the city's economy.
+&nbsp;Commercial services are affected more than commercial
+offices, and within each commercial type, higher wealth levels are
+affected more than lower wealth levels. &nbsp;The last statement is
+true of the noise effect on residences as well, although as mentioned
+earlier, it is much less than on commercial buildings.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+Overall, this number can have a very powerful effect on a city's
+economy. &nbsp;At its maximum, which is 3.000, you can cause a
+major
+economic expansion, although all that activity and noise can make busy
+residential areas less desirable for Sims, especially high-wealth ones.
+&nbsp;When this number is at its minimum, which is 0.001, business
+activity drops significantly, and you can have a major recession on your hands. &nbsp;Of course, the reduced
+activity
+makes your city a nice, quiet, desirable place for high-wealth Sims to
+live. &nbsp;But they may no longer be able to find jobs, so they
+may
+leave town anyway. &nbsp;(Original value: 0.250)</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Intersection Effect
+Multiplier</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal" align="justify">SC4
+simulates the speed reductions caused by stoplights, stop signs, and
+turning traffic by reducing network capacity at intersections and the
+two squares approaching them. This means that at intersections with
+heavy traffic, congestion will occur and slow down the traffic. Due to
+the way the simulator works, it can delay the traffic for no more than
+about six seconds, which is shorter than any standard stoplight cycle.
+However, even to do this much, network capacity has to be reduced to
+the point where the two squares approaching an intersection show up as
+red in the Traffic Congestion Data View. By default, the NAM Simulator
+has this effect set so that the maximum delay occurs only at very busy
+intersections. Wherever you see all green surrounding an intersection
+in the Traffic Congestion Data View, traffic is not slowing down at
+all; there is effectively no traffic control at that intersection.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+This field allows you modify the strength of the intersection effect by
+changing the amount of capacity reduction. Making the number in this
+field larger reduces the capacity around intersections further,
+strengthening this effect; making the number smaller reduces the
+effect. The effect can be essentially turned off by reducing the number
+in this field to .2, which is as low as it will go. The reason it
+doesn't go all the way to zero is that there is always some effect in
+the intersection itself. It is necessary to keep at least that small
+effect in order to maintain compatibility with NWM, where many types
+roads appear to the game to be a continuous series of intersections.
+(Original value: &nbsp;1.0)</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Commute Time Graph
+Scaling Factor</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal"><strong>Please note:
+The Commute Time Graph was not implemented properly in SC4, and as a
+result, it is impossible to configure it to give consistently correct
+readings.</strong> Nevertheless, many people like to use this
+graph, and on occasion, it can provide useful information.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+The original Maxis traffic simulator (as well as all versions of
+Simulators C, D, and E) allowed the Sims a mere six minutes to get from
+their homes to their jobs. This obviously seemed awfully short even to
+Maxis, who multiplied this number by 25 in the original Commute Time
+Graph. This ratio of 25:1 is also reflected in places such as the Prima
+Guide, which claims that the Sims have 2.5 hours to reach their jobs -
+exactly 25 times six minutes. You can restore this original factor to
+the Commute Time Graph display by setting this field to 1. However, you
+will get some ridiculously high numbers on your graph, since the NAM
+Simulator does not limit commute times to six minutes.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+You might expect that to see the actual commute time, you would simply
+set this scaling factor to 0.04, which is the decimal equivalent of
+1/25. This actually works in small cities that have no neighbors. There
+are some anomalies in the way that commute times are computed, though,
+and these start to show up in larger cities. The whole picture changes
+if you have neighboring cities, though. The average commute time starts
+increasing in proportion to the amount of traffic you have between
+cities. This may sound reasonable in theory, but in practice you can
+end up with one-way commute times of twelve hours or more, even with a
+scaling factor of 0.04.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+For these reasons, the scaling factor in the NAM Simulator has been set
+to 0.015. This results in commute times that are too short if you have
+just a small, single city, but it gives commute times that are too long
+if you have a big city with a large amount of intercity traffic. For
+average size cities with an average amount of intercity traffic, it
+gives commute times that are approximately correct. You may still see
+commute times vary greatly from one city to the next, though, even
+though the two cities may be very similar in everything except the
+amount of traffic going in and out of them.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+In any case, the scaling factor is now available for you to adjust to
+whatever value seems to make sense to you. You may still want to adjust
+it from one city to the next, though, even in the same region. In
+general, to get reliable information about the commuting habits of your
+Sims, the Route Query Tool, Traffic Data Views, and Traffic Volume
+Graph will be much more helpful than the Commute Time Graph. (Note that
+the Traffic Volume Graph shows the number of trips, and not commute
+times. Also, Sims who take multiple forms of transportation to get to
+work will show up in multiple places on this graph.)
+&nbsp;(Original value: 0.015)</p>
+
+
+
+      
+      
+      
+      <p class="text_normal"><span style="font-weight: bold;">Commute Trip Max Time</span></p>
+
+
+
+      
+      
+      
+      <p class="text_normal">This field specifies the maximum time in
+minutes that Sims are allowed to take to reach their jobs in the
+morning commute. &nbsp;(The evening commute never has any time limit.)
+&nbsp;This is the only field of its type that is grayed out in the
+Traffic Simulator Configuration Tool, and the reason for this is that
+setting the value in this field too low can have extreme negative
+consequences for your game. &nbsp;The field can be enabled by checking
+the box next to it. &nbsp;The default value of 600, which translates
+into ten hours, may seem quite excessive, and in fact may seem to imply
+an impossibly long work day for the Sims. &nbsp;However, time does not
+flow quite as you would expect in this game when there is traffic to
+other cities; this effect was discussed in the previous section, <span style="font-weight: bold;">Commute Time Graph
+Scaling Factor</span>.
+Before the current &nbsp;value for perfect pathfinding was discovered,
+a value this high was required for effective intercity commuting.
+Although this is no longer the case, higher values, at least up to 600,
+do seem to provide a slightly positive effect on a city's health,
+without providing any negative effects. &nbsp;Raising this value beyond
+600 does not seem to have any effect at all.</p>
+
+
+
+      
+      
+      
+      <p class="text_normal">What are the effects of lowering this
+value? &nbsp;Once it becomes substantially lower than 600, there is
+often a small decline in the general wealth levels of &nbsp;the city.
+&nbsp;This decline tends to be rather small, though, and is often
+noticeable only by examining the Pop &amp; Jobs graph over many years.</p>
+
+
+
+      
+      
+      
+      <p class="text_normal">Reducing this value down into the double
+digits starts to have more of an effect. &nbsp;Normally, all commutes
+within a given city are Short, and all commutes to neighboring cities
+are Long. &nbsp;Short commutes give a slight increase to the
+desirability of a Sim's residence, while Long commutes result in a
+slight decrease in desirability. &nbsp;Medium commutes have no effect
+on desirability.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">As the value of <span style="font-weight: bold;">Commute Trip Max Time</span>
+continues to drop, some of the longest commutes within the city will
+become Medium, making their originating residences less desirable
+compared to the residences of Sims who have Short commutes. &nbsp;As <span style="font-weight: bold;">Commute Trip Max Time</span>
+drops even further, some Long commutes will start appearing in the
+city, and the residences from which those commutes originate will have
+even lower desirability. &nbsp;Jobs with a Long commute in the current
+city have lost their built-in advantage over jobs in a neighboring
+city, so that paradoxically, there is a certain lower range of <span style="font-weight: bold;">Commute Trip Max Time</span>
+where it becomes more attractive to many Sims to look for jobs in
+adjacent cities than in their own. &nbsp;This may also aggravate any
+eternal commuter loops that may be present in the region.</p>
+
+
+
+      
+      
+      
+      <p class="text_normal">Once <span style="font-weight: bold;">Commute Trip Max Time</span>
+starts falling into the single digits (and sometimes slightly before),
+the probability that Sims will find jobs for which they are qualified
+starts to decline, because there is just no longer time to reach them.
+&nbsp;When this happens, the dreaded No-Job Zot appears over the Sims'
+homes, and if they can't find a job within about six months, the Sims
+leave town, and their residence is abandoned due to commute time.
+&nbsp;At these levels of <span style="font-weight: bold;">Commute Trip Max Time</span>,
+traffic routes and congestion levels become much more important,
+because every second counts in determining whether Sims will keep their
+jobs. &nbsp;This whole situation can become quite challenging, but it
+is because many people like this type of challenge that this option has
+been included in the Traffic Simulator Configuration Tool.</p>
+
+
+
+      
+      
+      
+      <p class="text_normal">For reference, the original game had a <span style="font-weight: bold;">Commute Trip Max Time</span> of six minutes. &nbsp;In the Traffic Simulator Configuration Tool, this field can be set as low as one minute.</p>
+
+
+
+      
+      
+      
+      <p class="text_zwischentitel">Vehicle Air Pollution</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This field specifies the
+fraction of normal air pollution that vehicles emit when the Clean Air
+Act is enabled. Normally, the unmodified Clean Air Act doesn't affect
+vehicle air pollution at all; even stranger, neither does the
+Automobile Emission Reduction Act. Instead, both of these ordinances
+affect all types of air pollution except vehicle air pollution. Each of
+these ordinances reduces all other air pollution by 10%; the effect of
+these two ordinances is additive.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+Some people may have noticed that even in the unmodified Sim City 4,
+vehicle air pollution can get so bad that you can actually use the air
+pollution data view to see a street map of your city. With the addition
+of custom content that provides the possibility of much denser cities,
+along with greater traffic higher-capacity traffic simulators to
+support such cities, this problem only becomes worse. This is why in
+the NAM Simulator, enabling the Clean Air Act reduces vehicle pollution
+by 60%.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+However, you may think that's too much of a reduction. Or, you may want
+to get rid of vehicle air pollution completely as part of an effort to
+run a "green" city. This field allows you to adjust the amount of
+vehicle air pollution to your liking. You can drop it all the way down
+to zero, or you can raise it all the way up to two, giving you twice
+the vehicle air pollution of the standard game. This last option can be
+useful when building cities where pollution controls are unheard of.
+&nbsp;(Original value: 0.4)</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Data Views</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Use new Subway View</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">Starting with the June 2009
+NAM, the Subway View (where you build subways) automatically shows the
+traffic volume for the subways, using the same colors as the Traffic
+Volume Data View. It also shows essentially all subway stations. This
+can be helpful in deciding where to build new subway lines. However,
+some people may not like this feature. Unchecking the box in this field
+turns it off.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Use new Subway
+Building View</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">Starting with the June 2009
+NAM, the Subway Building View (where you build subway stations) has
+been drastically changed. The biggest change is that in the new Subway
+Building View, buildings are not displayed, making it easier to place
+subway stations in high-density sections of your cities. To return the
+the original Maxis Subway Building View, uncheck the box in this field.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Display Subway / El
+Rail / GLR Volume</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This field is available only
+when <strong>Use new Subway Building View</strong> is
+checked; otherwise, it is grayed out. When this option is checked, the
+subway, el rail, and GLR volume is shown for those networks, just as it
+is in the Traffic Volume Data View.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Use new Zones View</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">Starting with the June 2009
+NAM, the Zones View has been modified to display much more than just
+the zones. It now displays what the new Subway Building View displays,
+except without the rail volume. To use the original Maxis Zones view,
+uncheck the box in this field.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Show Subway Lines</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This field modifies the new
+Zones View; when the <strong>Use new Zones View</strong>
+field is unchecked, this field is grayed out. Normally, subway lines
+are part of what is shown in the new Zones View. When the box in this
+field is unchecked, they are no longer shown.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Show Props</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This field also modifies the
+new Zones View; when the <strong>Use new Zones View</strong>
+field is unchecked, this field is grayed out. Normally, props are part
+of what is shown in the new Zones View. When the box in this field is
+unchecked, they are no longer shown.</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Saving Changes</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td><span class="text_normal">When you are
+finished making modifications to your simulator, click the "Save"
+button. The modified simulator will be saved in the same folder from
+which the original simulator was loaded. If any of your data views were
+changed, they will be automatically saved as well. If you changed the <strong>Network
+Capacity Multiplier</strong> from its standard value of 1.0, this
+will automatically generate new Traffic Volume Data Views, and they
+will be included in the save.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+If there is a standard traffic simulator already in this folder, you
+will be asked if this is your active traffic simulator folder (usually
+your NAM folder). If you say "Yes," then any existing traffic simulator
+will be deleted; if there is a custom simulator (i.e., one created by
+this program), it will be renamed to have a ".sav" extension, possibly
+followed by a number. The same procedure is followed if your Traffic
+Volume Data View file has been changed.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+If you didn't specify a NAM folder or an initial simulator to modify at
+the beginning, pressing the "Save" button will bring up a folder dialog
+box that will allow you to select a folder in which to save your
+changed files. You can also use the "Save As" command in the "File"
+menu to force the program to allow you to choose a folder to save your
+changed files. If you make changes to your simulator and then decide
+you don't like them, you can click the "Reset" button. This will set
+all fields in the program to what they were when your simulator was
+loaded or created, or when it was last saved, whichever is more recent.</span>
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Backups</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">If backups are currently
+turned on, a backup is made of any changed files.&nbsp; (See the
+section named <strong>Backups</strong> in the
+"Configuration" section below for details on managing this option.)
+&nbsp;Only those files that have been modified from the default are
+changed, since standard files can easily be created by using the TSCT
+and this Guide. &nbsp;Backups are stored in the <strong>backup</strong>
+subfolder of the main TSCT installation directory. The name most recent
+&nbsp;backup consists of the main file name followed by a .sav
+extension instead of the normal .dat extension. &nbsp;If more than
+one backup has been specified (the default is five), the first saved
+file will be renamed to have a .sav1 extension when the next backup is
+saved. &nbsp;As further backups are made, the most recent one will
+be renamed to have a .sav extension followed by the next available
+number. &nbsp;The total number of backups is pruned as necessary so
+that it doesn't exceed the specified number. &nbsp;You can easily
+tell if backups are turned on or not by looking at the space at the
+bottom of the screen directly to the left of the Save button.
+&nbsp;If backups are turned on, the phrase "Backups <span class="gruen">On</span>" will be displayed.
+&nbsp;If backups are turned off, the phrase "Backups <span class="rot">Off</span>" will be displayed.</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Using the Traffic Simulator
+Configuration Tool to Emulate Older NAM Simulators</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <p><span class="text_normal">The TSCT can be
+used to create a traffic simulator that closely emulates any of the
+simulators from recent NAM releases - specifically, simulators A
+through E and their variations. (As the TSCT uses the core of Simulator
+Z as a base, no emulation of that simulator is necessary.) This section
+describes what is necessary to create such emulations. If you try
+certain settings for an emulation and they aren't quite what you want,
+simply change them; no lasting harm will come to your city from using
+settings that are somewhat different from what you used before.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+An important point to note is that for many of these simulator
+emulations, the usage mix of mass transit types may be different from
+what you're used to. Specifically, if you have a lot of rapid transit
+(i.e., rails), bus usage may be lower. The reason for this difference
+is simple: The Sims are smarter now. They will almost invariably take
+the fastest route for the morning commute. So if you have bus lines
+that parallel rapid transit, the Sims will take the rapid transit
+instead of the buses. The easiest way to get more of the rapid transit
+mix that you're used to is to add more bus stops, and perhaps reduce
+the number of rapid transit stations. Note that the game treats trams
+as rapid transit. You may also want to turn on the <strong>Highway
+Bus Lanes</strong> option, although sometimes the Sims will be
+very clever and just use these speedier highway buses to get to the
+rapid transit faster.</span><br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+      <span class="text_zwischentitel">Specific settings
+recommended for emulating the older simulators</span></p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">For <em>all</em>
+of the older simulators, <span style="font-weight: bold;">Buses contribute to traffic</span> should be unchecked, <strong>Vehicle Air Pollution</strong>
+should be set to 0.90, and <strong>Commute Time Graph Scaling
+Factor</strong> should be set to 1.000.</p>
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">
+For all of the older simulators except <span style="font-style: italic;">Simulator B</span>, the <span style="font-weight: bold;">Customers/Traffic Noise Coefficient</span> should be set to 0.128. &nbsp;For Simulator B, this coefficient should be set to 0.096.</p>
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">For <em>Simulators A</em> and <em>B</em>, the
+base network capacity
+of "Low", "Medium", and "High" roughly corresponds to these simulators'
+"Hard", "Medium", and "Easy" levels. However, congestion at a given
+capacity level in the NAM Simulator is usually much less than
+congestion at the corresponding capacity level of Simulators A or B.
+Therefore, you may wish to use a lower capacity level for these
+simulators, or make a finer adjustment using the <strong>Network
+Capacity Multiplier</strong>. What is necessary here depends on
+lot on your cities, and specifically how much rapid transit you use.
+The more rapid transit you use, the less network capacity you will
+need. Conversely, a city with little or no rapid transit will tend to
+require capacity levels very similar to the ones used in Simulators A
+and B to provide similar congestion levels.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+For <strong>Mass Transit Usage</strong>, a setting of
+either "Medium High" or "Medium" should work well for a Simulator A or
+B emulation. For cities with lots of rapid transit, a setting of
+"Medium" will generally provide a better emulation. For both of these
+simulators, the <strong>Intersection Effect Multiplier</strong>
+should be set to 0.2.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+For <em>Simulators C, D,</em> and <em>E</em>, the capacity settings
+of "Classic", "Low", and "High" roughly correspond to the "Standard",
+"2x", and "5x" capacities of these simulators. For Simulator E, these
+capacities should be used as they are, possibly adjusting "High"
+downward slightly using the <strong>Network Capacity Multiplier</strong>.
+For Simulator D, lower capacities will be required to produce the same
+congestion effects as experienced in this simulator, and Simulator C
+will require still lower capacities. The exact capacities required
+depend on the cities in which these simulators are used.<br>
+
+
+
+
+
+
+      <br>
+
+
+
+
+
+
+For <strong>Mass Transit Usage</strong>, a setting of
+"Medium" to "Medium High" is recommended for Simulator C, "Medium High"
+to "High" is recommended for Simulator D, and "High" to "Very High" is
+recommended for Simulator E. For all three of these simulators, the <strong>Intersection
+Effect Multiplier </strong>should be set to 0.4.</p>
+
+
+
+      
+      
+      
+      <p class="text_normal">For all versions of <span style="font-style: italic;">Simulators C, D, </span>and <span style="font-style: italic;">E</span>, the value of <span style="font-weight: bold;">Commute Trip Max Time</span> should be set to 6. &nbsp;For Simulator A, this value should be set to 17, and for Simulator B, it should be set to 24.</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+
+
+
+
+
+        <tbody>
+
+
+
+
+
+
+          <tr>
+
+
+
+
+
+
+            <td bgcolor="#4b4d91" height="20"><span class="text_titel">&nbsp;Configuration</span></td>
+
+
+
+
+
+
+          </tr>
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        </tbody>
+      
+      
+      
+      
+      
+      </table>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+    <tr>
+
+
+
+
+
+
+      <td>
+      
+      
+      
+      
+      
+      <p class="text_normal">This program has a number of
+configuration options that can be found in the Options selection under
+the Tools menu. The Options dialog allows you to set a number of
+configuration options within the program. They include the following:</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Language</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">Here you can specify the
+language of the user interface and the User's Guide.
+&nbsp;Currently, English and German are supported.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Backups</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This setting specifies the
+number of backup versions of your traffic simulator and data view files
+that the TSCT will keep. &nbsp;A value of zero means that no
+backups are made. &nbsp;Backups are described in more detailed in
+the section named <strong>Backups</strong> under "Saving
+Changes," above.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">GUI Style (Skin)</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This setting specifies the
+style of the program's Graphical User Interface.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Debug Mode (Log to file)</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">When set, this option causes
+a debugging log file to be created in the <strong>temp</strong>
+subfolder of the TSCT installation folder.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Welcome Dialog</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">When set, this option causes
+the initial Welcome screen to be displayed the next time the program is
+run. &nbsp;It is only displayed once, unless this option is checked
+again later.</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_zwischentitel">Traffic Simulator
+Folder</p>
+
+
+
+
+
+
+      
+      
+      
+      
+      
+      <p class="text_normal">This is a read-only field
+that specifies what folder the TSCT is currently using for reading and
+writing traffic simulators and data views.</p>
+
+
+
+
+
+
+      </td>
+
+
+
+
+
+
+    </tr>
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+</body>
+</html>
