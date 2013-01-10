@@ -1,0 +1,381 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Technical Notes</title>
+<style type="text/css">
+<!--
+.text_titel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.text_zwischentitel {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+.text_normal {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+body {
+	background-image: url();
+	background-color: #B2BAD9;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:visited {
+	color: #000000;
+	text-decoration: underline
+}
+a:hover {
+	color: #CC0000;
+	text-decoration: underline
+}
+a:link {
+	color: #000000;
+	text-decoration: underline
+}
+.rot {
+	color: #FF0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="750" border="0" align="center" cellpadding="4" cellspacing="0" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;SimCity 4 Network Addon Mod by the NAM Team </span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><div align="justify">
+      <p><a href="1.README.htm">Back to Main Page</a></p>
+      <p>It is strongly recommended that you read the information contained in this file. While it is mainly intended for persons with the skills to open the NetworkAddonMod.dat &amp; associated file(s), it contains important information about the game. Therefore the following information aims at the more technical side of things and should only be considered as an additional source of information about the mods&rsquo; files &amp;/or game. To install the mod, please refer to the <a href="2.InstallationInstructionsFile.htm">Installation Instructions</a>.</p>
+      <ul><li><a href="#1">1. Known (Game) Issue(s) &amp;/or Bugs</a></li>
+        <li><a href="#2">2. Files used</a></li>
+        <li><a href="#3">3. Path(s) (files)</a></li>
+        <li><a href="#4">4. Network Hierarchy</a></li>
+        <li><a href="#5">5. Lots</a></li>
+        <li><a href="#6">6. ANT Item</a></li>
+        <li><a href="#7">7. NAM ID Conventions</a></li>
+        <li><a href="#8">8. Left Hand Version Rail Networks Fix</a></li>
+        <li><a href="#9">9. End Notes</a></li>
+        </ul>
+    </div></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="1"></a>1. Known (Game) Issue(s) &amp;/or Bugs</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><div align="justify">This section explains currently known game issues with SimCity 4&rsquo;s Traffic/Network system that may be relevant to this mod. This is not all inclusive, &amp; as such other issues may currently exist that are not covered here.
+        <p class="text_zwischentitel">1.1 General</p>
+        <p>Because we do not have the same level of tools &amp;/or degree of control over the game that Maxis does, some custom-based items may currently have Pathing, Graphical &amp;/or other unknown/known issues with them, &amp; exhibit behaviour that may not &amp;/or should not occur normally. Unfortunately, some issues are beyond our control &amp; as such may not be fixable at all. The following sections explains some of these issues in more detail</p>
+        <p class="text_zwischentitel">1.2 Networks</p>
+        <p>SimCity 4&rsquo;s Networks, in general, exhibit a proximity behaviour when actively using the bulldozing tool &amp;/or the different Networking Tools (Street, Road, Avenue, Rail, etc). When actively using these tools to bulldoze &amp;/or draw a section of network, intersection tile &amp;/or otherwise, this proximity behaviour can sometimes invoke issues, drawing bugs &amp;/or otherwise in certain circumstances that may not otherwise occur normally. Such issues may also prevent the drawing of an intersection &amp;/or section of network that might otherwise be possible to draw. This proximity behaviour is generally 3 to 4 tiles, but may be higher or lower in some cases.</p>
+        <p><strong>Solution</strong></p>
+        <p>While this proximity behaviour may be overcome in some cases by implementing the necessary rules for the game for such issues, the time it would take outweighs the benefits of implementing such rules in most cases (though some rules have been implemented for some of these). Often times, some issues may be rectified by bulldozing &amp;/or re-drawing a section of network, intersection tile &amp;/or otherwise, making sure the same action, series of actions, or set-up, that invoked the issue in the first place is not repeated.</p>
+        <p class="text_zwischentitel">1.3 Paths</p>
+        <p>SimCity 4&rsquo;s Pathing system, in general, is controlled by a set of rules. For each tile of network that exists in the game, there is a Path file, &amp; Paths (or Plotting Points) within that file, for the in-game tile. Unfortunately, some aspects of SimCity 4&rsquo;s Pathing system are controlled by the games engine (or EXE). Because of this, some custom-based items may currently have UDI/Pathing issues with them, &amp; exhibit commuter &amp;/or UDI behaviour that may not &amp;/or should not occur normally. Some Custom-Based Interchanges &amp; Rail-Based networks, at least, are known to be affected by this to some degree.</p>
+        <p class="text_zwischentitel">1.4 Interchange-Base Related Items - Placement -</p>
+        <p>There are two known critical bugs that exist with the game that are related to <span class="rot">Interchange-Base Related</span> Items, &amp; the placement of these items. The following section explains these two bugs.</p>
+        <p class="text_zwischentitel">1.4.1 Placement &amp; Zones</p>
+        <p>A bug exists that can potentially prevent the removal of a zones&rsquo; Building/Lot. This same bug also has the potential to cause the game to crash. The exact precise cause of the issue is not known. The following outlines the general-case scenario in which these issues may arise &amp; possible solution:</p>
+        <p><strong>Items related to known issue:</strong></p>
+        <ul>
+          <li>Zones of any type (excluding Landfill) &amp; the associated Buildings/Lots that spur from &amp;/or sit on these zones. This can include residential, commercial, industrial zones, of all density levels, &amp; their related Buildings &amp;/or Lots. These related Buildings/Lots can include both Maxis originals &amp; any custom made Buildings/Lots related to zones.</li>
+          <li>Interchange Related Item(s) (IRI); this can include both Maxis originals &amp; any custom made items that are <span class="rot">interchange-base related</span>, such as; Highway Overpasses; Ramps; Cloverleafs; PuzzlePieces; &amp; other similar item(s).</li>
+          <li>Route Query Tool &amp;/or Normal Query Tool (in the case of the game crashing).</li>
+        </ul>
+        <p><strong>Point of Issue Arising &amp;/or Crashing:</strong></p>
+        <p>If an IRI is built on already existing zones&rsquo; Buildings/Lots, the removal of these buildings where the IRI is &amp;/or was built may potentially no longer be possible to properly remove. Using either the Route Query Tool &amp;/or Normal Query Tool on these affected Buildings/Lots, including even just hovering the Query Tool over any affected Lots, may also potentially cause the game to instantly crash to the desktop.</p>
+        <p><strong>Solution:</strong></p>
+        <p>In order for this bug not to be triggered in the first place, it is highly advisable that when placing an IRI that the terrain below the item be clear, &amp; not contain any zones, &amp;/or related buildings. </p>
+        <p>If by some reason the bug has been triggered, i.e. an IRI has been built on some zones, then be sure not to use either Query Tools on &amp;/or over any of the zones&rsquo; Buildings/Lots otherwise the game may instantly crash. In order to remove any buildings (that have been affected) that can not immediately be bulldozed/removed properly; re-zone the affected area, making sure there is still normal road access. Wait for a period of several (game) months, &amp; then attempt to remove the affected Buildings/Lots. This may potentially enable the affected buildings/lots to be properly removed.</p>
+        <p class="text_zwischentitel">1.4.2 Placement &amp; Transit Enabled Lots</p>
+        <p>An issue with the game which may cause the game to <strong>crash</strong> has been identified. At this time the exact precise cause of the issue is yet to be determined. The following outlines the general-case scenario in which the issue may cause the game to crash:</p>
+        <p><strong>Items related to known issue:</strong></p>
+        <ul>
+          <li>Transit Enabled Lot(s) (TEL); this can include both Maxis originals &amp; any custom made TEL.</li>
+          <li>Interchange Related Item(s) (IRI); this can include both Maxis originals &amp; any custom made items that are <span class="rot">interchange-base related</span>, such as; Highway Overpasses; Ramps; Cloverleafs; PuzzlePieces; &amp; other similar item(s).</li>
+          <li>Cursor of Interchange-base Related Item(s).</li>
+        </ul>
+        <p><strong>Point of Crashing:</strong></p>
+        <p>If the Cursor contains an IRI on it &amp; then this Cursor is hovered over &amp;/or clicked on (&amp;/or repeated) a TEL, it can in some circumstantial cases cause the game to instantly crash to the desktop. Currently this is only known to occur if the IRIs' network on the Cursor is the same network with which the TEL is compatible with.</p>
+        <p><strong>Solution:</strong></p>
+        <p>Currently at this time, a full-proof work-around to the issue is not yet known. It is simply advised that users avoid moving the Cursor over a TEL if the Cursor has an IRI on it to minimize the chances of the game crashing. It is also advised that any TEL that exists in a city has its compatible network drawn right into/through the Lot, as this will also minimize the chances of the game crashing.</p>
+        <p>For more information on the above issue, see the following thread: <a href="http://www.simtropolis.com/forum/messageview.cfm?catid=124&threadid=55794" target="_blank">Cursor + Transit Enabled Lot = Crashing</a>.</p>
+        <p>The issue described above has been looked into, &amp; currently at this time evidence seems to point to the problem existing within the games&rsquo; executable itself, therefore there is nothing that can (currently) be done about this to completely &amp; properly rid of the bug (unless Maxis decides to address the issue). The reason the issue has been mentioned here is because it has a probable significant impact on the use of this mod &amp; those that use it.<br>
+        </p>
+    </div></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="2"></a>2. Files used</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><span class="text_zwischentitel">2.1 Existing files used indirectly in association with the Network Addon Mod</span>
+      <p>The Network Addon Mod currently relies on a number of the games existing files that you will already have.</p>
+      <p>These files include, but are not limited to, the following:</p>
+      <ul>
+        <li> Various FSH files. Also known as Texture files. </li>
+        <li> Various Exemplar files.</li>
+        <li> Various S3D files. Also known as 3D files or Models.</li>
+        <li> Various SC4Path files.</li>
+        <li> Various Text based files.</li>
+        <li> UI or User-Interface Files</li>
+        <li> LUA Files. Also known as script files.</li>
+      </ul>      
+      <p align="justify">Quite a number of the above files are also included in the Network Addon Mod and form part of Transit related Bugfixes &amp;/or other Additional features.</p>
+      <p align="justify">If you've changed the look and/or contents of any of these above files, &amp;/or used a mod or Bat/Lot file that has, there is a big chance that any/all of the features of this Mod will be affected. The extent of this is not something that can be told, it all really depends on what, if anything, may have been done to any of the above file types that are connected with the look &amp;/or functionality of the contents of the Network Addon Mod.</p>
+      <p class="text_zwischentitel">2.2 Unique files used directly within the Network Addon Mod</p>
+      <p align="justify">The Network Addon Mod includes, depends on, and uses a number of files that are unique to games&rsquo; engine. Because of this, certain files can not be replicated, changed, removed, &amp;/or modified without any change, consequences &amp;/or adverse affects on the game. These files include, but are not limited to, the following specific files [with Instance IDs]:</p>
+      <p class="text_zwischentitel">Cohort File(s)</p>
+      <ul>
+        <li>ElTrain Cohort - 0x8BBF6D45</li>
+      </ul>      <p class="text_zwischentitel">Exemplar File(s)</p>
+      <ul>
+        <li> Traffic Simulator - 0xC9133286</li>
+        <li> Automata Tuning - 0x00000001</li>
+        <li> DirtRoad - 0x0000001A</li>
+        <li> Dirt Road Placement Tuning Parameters - 0xEBE08CDA</li>
+        <li> Traffic Commute Graph - 0x0000000B [This file is included with &ldquo;<em>&hellip;_10xCommute</em>&rdquo; files]</li>
+      </ul>      <p class="text_zwischentitel">RUL File(s)</p>
+      <ul>
+        <li>Highway - 0x00000001</li>
+        <li>Highway - 0x00000002</li>
+        <li>Rail - 0x00000005</li>
+        <li>Rail - 0x00000006</li>
+        <li>Road - 0x00000007</li>
+        <li>Road - 0x00000008</li>
+        <li>Street - 0x00000009</li>
+        <li> Street - 0x0000000A</li>
+        <li>Avenue - 0x0000000D</li>
+        <li>Avenue - 0x0000000E</li>
+        <li>OneWayRoad - 0x00000011</li>
+        <li> OneWayRoad - 0x00000012</li>
+        <li> DirtRoad - 0x00000013</li>
+        <li> DirtRoad - 0x00000014</li>
+        <li> Ground Highway Rules - 0x00000017</li>
+        <li> Ground Highway Rules - 0x00000018</li>
+        <li> OneWayRoad Bridge Specializations - 0x0000100A</li>
+        <li> Intersection Ordering - 0x10000000</li>
+        <li> Intersection Solutions - 0x10000001</li>
+        <li> Rule Overrides - 0x10000002</li>
+      </ul>      <p class="text_zwischentitel">INI File(s)</p>
+      <ul>
+        <li> Network Parameters - 0x8A5993B9</li>
+      </ul>      </td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="3"></a>3. Path(s) (files)</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td><div align="justify">
+      <p class="text_zwischentitel">3.1 Puzzle Pieces &amp; Overpasses</p>
+      <p class="text_normal">Because the game has Left-hand &amp; Right-hand driving versions, covering all the different Pathing possibilities involved in relation to OneWayRoad Puzzle Pieces, in an efficient &amp; effective manner, sometimes makes them somewhat problematic to code/path for. For this reason some OneWayRoad Puzzle Pieces, namely <strong>Intersection-Based</strong> related Puzzle Pieces, contain Bi-Directional Pathing for both forward and reverse Pathing files, or Right-hand &amp; Left-hand drive. The same also applies to some Road &amp; Avenue Intersection-Based Puzzle Pieces. This was done as a preventative measure to overcome any complication issues that may have arisen with players using the items of this mod that are associated with, namely OneWayRoad, Puzzle Pieces, with having any functional &amp;/or just general problems with them. As a result players may notice some pathing &amp;/or automata oddities &amp;/or issues with/when using these particular items of the mod.</p>
+      <p class="text_normal">The above paragraph typically does not apply to Puzzle Pieces or Overpasses that contain <strong>Directional Arrows</strong>. Puzzle Pieces &amp; Overpasses that contain <strong>Directional Arrows</strong> should function properly as they should, typically without any Pathing/Automata oddities, as long as they are placed &amp; linked up properly according to their <strong>Directional Arrows</strong>.</p>
+      <p class="text_zwischentitel">3.2 U-Drive-It &amp;/for EI Rail</p>
+      <p class="text_normal">There exists some game limitations with which we had to work with in order to make UDI for EI Rail possible. Unfortunately, for certain aspects of UDI for a Rail-based network, the game will only recognise certain paths for the track switches (Track switches are what make it possible to go in different directions at junctions during UDI). Because of this, UDI EI Rail &amp;/or EI Rail Path files contains a replicated set of paths; one set of paths for its own original intended network; &amp; one set for the UDI EI Rail mode. The set of paths for UDI EI Rail mode are technically ground-rail-based pathing. Because of this, it should be possible to take a UDI passenger train &amp;/or UDI freight train from ground rail to EI Rail using a Transit Enabled Lot (&amp; visa-versa for EI Rail Train to ground rail). The Transit Enabled Lot would have to contain special custom path files though, in order to achieve this. This however, is currently outside the scope of this mod.</p>
+    </div>
+    </td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="4"></a>4. Network Hierarchy</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><div align="justify">There exists a hierarchy in the game with the different Networks. The following is a guideline on the hierarchy of the different above ground Network types:
+        <p>[In order of Top of the hierarchy to the bottom of the hierarchy]</p>
+        <ul>
+          <li>Monorail Network</li>
+          <li>Elevated Rail Network</li>
+          <li>Highway Network </li>
+          <li>Rail Network</li>
+          <li>GroundHighway Network</li>
+          <li>Avenue Network</li>
+          <li>OneWayRoad Network</li>
+          <li>Road Network</li>
+          <li>Street Network</li>
+          <li>ANT Network (RHW Network)</li>
+        </ul>
+        <p>The higher up the hierarchy a network is, a higher priority is given to the network when drawing one network over another (in a parallel overlapping fashion). For this reason it is not possible to drag a network at the lower end of the hierarchy over a network that is higher up the hierarchy, &amp; for the network to be converted to that of the lower hierarchical network. This is something defined in the games engine and it is highly doubtful that it can be changed. Apart from this though, generally this hierarchy should not cause any problems, unless you are a modder trying to mod Networks(s) &amp;/or associated files.<br>
+        </p>
+        </div></td>
+  </tr>
+  <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="5"></a>5. Lots</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><div align="justify">This mod does not contain Lots &amp;/or Lot [Exemplar] files at all, such as those found in Buildings Lots; in any way what so ever.<br>
+        </div></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="6"></a>6. ANT Item</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal">The ANT item that Maxis left incomplete/inactive in the game, with the technical name of &quot;DirtRoad&quot;, was an optional plugin that has been superseeded by the Rural Highway Mod (RHW). The complete functionality of the ANT Plugin has been transferred to the RHW and is not longer supported by the NAM. For more information about the RHW, please refer to the RHW readme file.</td>
+  </tr>
+  <tr>
+    <td class="text_normal"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="7"></a>7. NAM ID Conventions</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><div align="justify">This section briefly covers the file conventions that the NAM typically follows for its custom content (where applicable). These conventions are guidelines only &amp; as such some pre-existing items pre-date when these guidelines were established &amp; may not follow the conventions. Also; some limited exceptions &amp;/or variations may apply or (need to) exist due to functional, technical &amp;/or internal housekeeping purposes.
+        <p>Most conventions are governed by or have been influenced by Maxis conventions. These conventions mostly apply to Network related files, &amp; while it is not completely comprehensive, it does cover InstanceID conventions, Network conventions, &amp;/or any other conventions that may be applicable or appropriate for this section at this time. These conventions encompass S3D Model files, SC4Path files, Network-Based Exemplar files, Network-Based FSH files, Network-Based EffectDir files, Network-Based Prop related files, &amp; possibly others.</p>
+        <ul>
+          <li>GroupID designations: GroupIDs of the various items &amp;/or areas of the game are typically used as flags for functional purposes &amp; are usually governed by Maxis file formats.</li>
+          <li>InstanceID designations for Interchange base items: 0x5NDDD##Z</li>
+          <li>InstanceID designations for Non-Interchange base items. 0x5FNDDDWZ</li>
+          <li>InstanceID designations for Bridges &amp; Network Props (like custom Traffic Lights): 0x5NDDDZR0</li>
+        </ul>
+        <ul>
+          <li>N = Network designation. See table below for these.</li>
+          <li>DDD = MonthMonthDayDay in full extended decimal form (with all leading zeros) converted into hex. Where 2004 is the baseyear &amp; each subsequent year 12+ Month per year should be added to MonthMonth before converting to hex. For multiple items on a set date, increase/decrease accordingly based on the initial date.</li>
+          <li># = remaining portion of hex making up the whole InstanceID. This portion of the InstanceID typically based on the base InstanceID of the item.</li>
+          <li>W= Wealth. This typically only applies to referenced S3D files &amp; FSH files (where applicable).</li>
+          <li>Z = Zoom level. This typically only applies to referenced S3D files &amp; FSH files (where applicable).</li>
+          <li>R = Rotation. This typically only applies to referenced S3D files &amp; FSH files (where applicable).</li>
+        </ul>
+        <table width="600" border="1" align="center" cellpadding="0" cellspacing="0" bordercolor="#CCCCCC">
+          <tr class="rahmen">
+            <td width="150"><div align="center">Road</div></td>
+            <td width="50"><div align="center">0</div></td>
+            <td width="150"><div align="center">Street</div></td>
+            <td width="50"><div align="center">5</div></td>
+            <td width="150"><div align="center">GroundHighway</div></td>
+            <td width="50"><div align="center">A</div></td>
+          </tr>
+          <tr class="rahmen">
+            <td><div align="center">Highway</div></td>
+            <td><div align="center">2</div></td>
+            <td><div align="center">Subway</div></td>
+            <td><div align="center">6</div></td>
+            <td><div align="center">Monorail</div></td>
+            <td><div align="center">D</div></td>
+          </tr>
+          <tr class="rahmen">
+            <td><div align="center">Rail</div></td>
+            <td><div align="center">3</div></td>
+            <td><div align="center">ElevatedRail </div></td>
+            <td><div align="center">8</div></td>
+            <td><div align="center">ANT</div></td>
+            <td><div align="center">E</div></td>
+          </tr>
+          <tr class="rahmen">
+            <td><div align="center">Avenue</div></td>
+            <td><div align="center">4</div></td>
+            <td><div align="center">OneWayRoad</div></td>
+            <td><div align="center">9</div></td>
+            <td><div align="center">&nbsp;</div></td>
+            <td><div align="center">&nbsp;</div></td>
+          </tr>
+        </table>
+    </div></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="8"></a>8. Left Hand Version Rail Networks Fix</span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><div align="justify">This section is an extension from the above section that deals with NAM ID Conventions. The conventions in this section however only apply to SC4Path files.
+      <p>This section deals with the &lsquo;Left-Hand Version Rail Networks fix&rsquo; included in the Network Addon Mod.</p>
+        <p>Right-Hand Drive Version versus Left-Hand Drive Version; SimCity 4 path files were written with Right-Hand Drive players in mind. Nearly all <strong>Path files</strong> were written with Right-Hand drive as the default. This applies to road-based networks such as street, road, avenue, &amp; rail-based networks such as rail, monorail &amp; elevated rail. For Left-Hand Drive versions, the game automatically reverses all road based pathing (or &ldquo;Car&rdquo; pathing), with the exception of onewayroads. The game does not however, apply this same automatic reversal for rail-based networks; and this is why this fix has, in part, been created.</p>
+        <p>This fix makes use of the games INI Network file that enables manual reversing of path files specifically for Left Hand Versions through the use of special InstanceID masking &amp; path file replacement, upon which the exe automatically scans at runtime. Unfortunately, current tests show that the Subway network is an exception to this. For this reason these paths have been included in an additional Plugin for Left-Hand versions. This extra additional Plugin also contains other files for Left-Hand versions. This extra dat Plugin should only be used for Left Hand drive versions. See the <a href="2.InstallationInstructionsFile.htm">Installation Instructions</a> regarding the installation of this extra Plugin file.</p>
+        <p>This particular fix will impact on Left-Hand Drive Versions. Because of the necessary adjustments that have been made, this fix will subsequently impact on Transit Enabled Lots, for Left Hand Versions. The following explains this impact in more detail.</p>
+        <p class="text_zwischentitel">Transit Enabled Lots</p>
+        <p>Transit Enabled Lots that do not specify an actual Path file &amp;/or just use simple RUL Flags in its LotConFig property, then it should not be affected &amp; no change should need to be made. However, Transit Enabled Lots that actually specify path file(s) in any of their LotConFig Properties will most likely be affected &amp; may need modifying. Transit Enabled Lots of this type will typically have 0x00000007 type LotConFig properties (or in other words; 0x00000007 as the first value), &amp; have 16+ values for the LotConFig property, specifying actual path files (i.e. InstanceID) in the 16th+ value. To overcome any adverse affects this fix may cause, for Transit Enabled Lots for Left Hand Versions, please read the following very carefully;</p>
+        <p>Transit Enabled Lots specifying Path files will already have the necessary path file(s) for Right Hand versions. For Left Hand Versions though, the path file(s) may need to be replicated, IIDs changed, &amp; the <strong>Rail-Related</strong> Pathing reversed for Left Hand versions (&amp; only rail-related pathing. Car-based pathing should not be reversed. There may exist some very limited exceptions to this). So in essence there will be two sets of Path files; one for Right Hand versions &amp; one for Left Hand versions. Both the Right-Hand Version Path file(s) InstanceID &amp; Left Hand Version Path file(s) InstanceID then need to be in a particular InstanceID range(s), in order to work properly for both Right Hand &amp; Left Hand players. The following ranges are valid Path File Instance ID conversion ranges in which the game will automatically use the replacement Path files in the case of Left Hand Drive Versions;</p>
+        <p>(Other IID reversal ranges exist, but the following ones are the main ones. Please see the INI file itself for a raw &amp; thorough breakdown).</p>
+        <p class="text_zwischentitel">Short abbreviated version</p>
+        <ul>
+          <li>0x0N###### &gt;&gt;&gt; 0x4N######</li>
+          <li>0x5N###### &gt;&gt;&gt; 0x7N######</li>
+          <li>0x5FN##### &gt;&gt;&gt; 0x7FN#####</li>
+        </ul>
+        <p>Where &lsquo;N&rsquo; = Network designation.</p>
+        <p class="text_zwischentitel">Long version (actual specific IID ranges)</p>
+        <ul>
+          <li>Default Path File(s) &gt;&gt;&gt; Replacement Path File(s)</li>
+          <li>Right-Hand Version &gt;&gt;&gt; Left-Hand Version</li>
+          <li>0x03###### &gt;&gt;&gt; 0x43######</li>
+          <li>0x53###### &gt;&gt;&gt; 0x73######</li>
+          <li>0x5F3##### &gt;&gt;&gt; 0x7F3#####</li>
+          <li>0x08###### &gt;&gt;&gt; 0x48######</li>
+          <li>0x58###### &gt;&gt;&gt; 0x78######</li>
+          <li>0x5F8##### &gt;&gt;&gt; 0x7F8#####</li>
+          <li>0x0D###### &gt;&gt;&gt; 0x4D######</li>
+          <li>0x5D###### &gt;&gt;&gt; 0x7D######</li>
+          <li>0x5FD##### &gt;&gt;&gt; 0x7FD#####</li>
+          <li>0xEA###### &gt;&gt;&gt; 0x4A######</li>
+        </ul>
+        <p># = remaining hex of the InstanceID of the Path file(s). This portion of the Instance ID should be exactly the same for both Right-Hand &amp; Left-Hand versions. As some <strong>examples</strong>:</p>
+        <ul>
+          <li>0x<span class="rot">0</span><strong>3031500</strong> &gt;&gt;&gt; 0x<span class="rot">4</span><strong>3031500</strong> ~ <em>these are actual path files found in the NAM &amp;/or the games own files</em></li>
+          <li>0x<span class="rot">5F8</span><strong>32900</strong> &gt;&gt;&gt; 0x<span class="rot">7F8</span><strong>32900</strong> ~ <em>these are actual path files found in the NAM</em></li>
+          <li>0x<span class="rot">5D</span><strong>123900</strong> &gt;&gt;&gt; 0x<span class="rot">7D</span><strong>123900</strong> ~ <em>in the case of a Rail-based Bridge</em></li>
+        </ul>
+        <p>All Rail-Related IID Ranges are covered &amp; reversed for Left Hand Drive versions. Any Path file(s) that fall within the ranges listed above, regardless of the type of Paths it contains, will be scanned by the exe, replacement Path File(s) used &amp; then reversed (NOTE: If a replacement Path file does not exist, the tile in question may not function). Since the exe does not actually reverse rail-based networks, it will simply use the Replacement Path file(s) as is for Left Hand Versions. If there exists car pathing in the replacement file(s) though, then the exe will only reverse the car pathing portion of the path file for Left Hand Drive versions.<br>
+        </p>
+    </div></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="20" bgcolor="#4B4D91"><span class="text_titel">&nbsp;<a name="9"></a>9. End Notes </span></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="text_normal"><div align="justify"><span class="text_zwischentitel">A.1</span>        <p>Commute Graph Exemplar: This has only been included in files with the &ldquo;<em>&hellip;_10xCommute</em>&rdquo; in its name. The only reason for this is to try and off-set the Commute Graph display so as to give a more representable idea of the commute time being experienced [against/compared to what people might usually consider/expect]. It&rsquo;s highly advisable that any time you change which Traffic Plugin file is used, that you give the game ample time to update everything/anything related &amp;/or connected to the Paths/Commutes. Twelve months game time, at least, should be given. This time will vary though depending on city size, game options, &amp;/or computer system.</p>
+        <p class="text_zwischentitel">A.2</p>
+        <p>Please note that some files have been replicated, used, &amp;/or referenced multiply times by different items &amp;/or areas of the files, including referencing the games own original files. One such example of this is some of the Puzzle Pieces; which basically makes use of the overpasses files [not necessarily all of them though].</p>
+        <p class="text_zwischentitel">A.3</p>
+        <p>It is highly advisable that you do not change the contents of these files, nor change any of the files TGI, not unless you know very well what you're doing. Since modifying any of these files may cause the file(s) &amp;/or fixes/features of the Network Addon Mod &amp;/or other items not to function properly, not at all, &amp;/or not as intended.</p>
+        <p><em>File Last Updated: Thursday, 24 April 2008</em><br>
+        </p>
+    </div></td>
+  </tr>
+</table>
+</body>
+</html>

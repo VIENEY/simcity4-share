@@ -1,0 +1,22 @@
+Gemika: Freight Station
+
+------------------------
+Lot Building: 13x7 Lot Capcity 5000 tons
+plop cost $2000
+Monthly cost $50
+
+This Station supplies 35 jobs total.
+Enjoy! 
+
+------------------------
+HOW TO INSTALL:
+
+select the file in the folder you downloaded
+copy them into your simcity4 plugins folder. 
+mydocuments/simcity4/plugins
+
+the Station will show up under Rail in the transportation menu. 
+
+
+
+
