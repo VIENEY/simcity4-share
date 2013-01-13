@@ -1,0 +1,7 @@
+Get your Sims around town in style. The Grand Metro Plaza has the capacity of 4 subway stations and is perfect for getting to the Academy Awards.
+
+Cost: 2000
+Maintenance: 80
+Capacity: 8000
+
+Landmark effect added to boost commercial desirability
