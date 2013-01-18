@@ -1,5 +1,0 @@
-CS$$4_4x4_ikea_superstore_0f656298.SC4Lot
-CS$$4_5x5_ikea_superstore_af656b8b.SC4Lot
-gc_ikea07-0x5ad0e817_0xb1e66b9c_0x30000.SC4Model
-GC_Essentials.dat
-BSCBATProps Gascooker Vol 04.dat

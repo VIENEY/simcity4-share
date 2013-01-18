@@ -1,2 +1,0 @@
-Growable industrial high-tech with 592 jobs. Growth stages are 2 and 3, and lots are 4x4, 5x4 and 5x6 size. This building is fictional. If you think it grows too much, remove some of the .lot files.
-By prepo
